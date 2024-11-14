@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d5ucn"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6nh50"]
 
 [resource]
-script = ExtResource("1_d5ucn")
+script = ExtResource("1_6nh50")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
 }
-character_names = PackedStringArray("peixe")
+character_names = PackedStringArray("Peixe", "Capivara")
 first_title = "3"
 lines = {
 "1": {
@@ -18,13 +18,25 @@ lines = {
 "type": &"title"
 },
 "10": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
 "id": "10",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "#Explicação do Puzzle#",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "#Explicação do Puzzle#",
+"type": &"dialogue"
+},
+"12": {
+"id": "12",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 },
 "3": {
-"character": "peixe",
+"character": "Peixe",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
@@ -36,7 +48,7 @@ lines = {
 "type": &"dialogue"
 },
 "4": {
-"character": "peixe",
+"character": "Peixe",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
@@ -48,7 +60,7 @@ lines = {
 "type": &"dialogue"
 },
 "5": {
-"character": "peixe",
+"character": "Peixe",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
@@ -60,7 +72,7 @@ lines = {
 "type": &"dialogue"
 },
 "6": {
-"character": "peixe",
+"character": "Peixe",
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
 "next_id": "7",
@@ -72,38 +84,52 @@ lines = {
 "type": &"dialogue"
 },
 "7": {
-"character": "peixe",
+"character": "Peixe",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Queria tanto saber o porquê, mas não consigo sair da água pra investigar",
+"text": "Queria tanto saber o porquê, mas não consigo sair da água pra investigar.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Queria tanto saber o porquê, mas não consigo sair da água pra investigar",
+"translation_key": "Queria tanto saber o porquê, mas não consigo sair da água pra investigar.",
 "type": &"dialogue"
 },
 "8": {
-"character": "peixe",
+"character": "Peixe",
 "character_replacements": Array[Dictionary]([]),
 "id": "8",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Poderia me ajudar?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Poderia me ajudar?",
+"type": &"dialogue"
+},
+"9": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
 "next_id": "10",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "\"Poderia me ajudar?\"",
+"text": "Não se preocupe, vou ver o que posso fazer!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "\"Poderia me ajudar?\"",
+"translation_key": "Não se preocupe, vou ver o que posso fazer!",
 "type": &"dialogue"
 }
 }
 raw_text = "~ start
 
-peixe: Ugh
-peixe: Estou me sentindo doente há tanto tempo...
-peixe: Todos os outros peixes que conheço também estão se sentindo tão enfraquecidos.
-peixe: Da minha família apenas eu sobrevivi...
-peixe: Queria tanto saber o porquê, mas não consigo sair da água pra investigar
-peixe: \"Poderia me ajudar?\"
+Peixe: Ugh
+Peixe: Estou me sentindo doente há tanto tempo...
+Peixe: Todos os outros peixes que conheço também estão se sentindo tão enfraquecidos.
+Peixe: Da minha família apenas eu sobrevivi...
+Peixe: Queria tanto saber o porquê, mas não consigo sair da água pra investigar.
+Peixe: Poderia me ajudar?
+Capivara: Não se preocupe, vou ver o que posso fazer!
+Peixe: #Explicação do Puzzle#
 
 => END"
 metadata/dialogue_manager_version = "2.44.0"

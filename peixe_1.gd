@@ -1,82 +1,66 @@
 extends CharacterBody2D
 
-
-const speed = 100
-var current_state = IDLE
-
-var dir = Vector2.RIGHT
-var start_pos
-
+# Constantes e variáveis de controle
+@export var velocidade = 100  # Velocidade do peixe
+@export var roaming_area = Vector2(300, 200)  # Área de roaming
+var dir = Vector2(1, 0)  # Direção inicial
 var is_roaming = true
-var is_chatting = false
+var roaming_bounds = Rect2(Vector2.ZERO, Vector2.ZERO)
+@export var limite_x_min = 575
+@export var limite_x_max = 1125
+@export var limite_y_min = 590
+@export var limite_y_max = 630
 
-var player
-var player_in_chat_zone = false
-
+# Estados
 enum {
-	IDLE, 
+	IDLE,
 	NEW_DIR,
 	MOVE
 }
+var current_state = IDLE
 
 func _ready():
 	randomize()
-	start_pos = position
-	
+	roaming_bounds = Rect2(position - roaming_area / 2, roaming_area)
+	_mudar_direcao()
+
 func _process(delta: float) -> void:
-	if current_state == 0  or current_state == 1:
-		$AnimatedSprite2D.play("l1")
+	if is_roaming:
+		_mover(delta)
 
-			
-	elif current_state == 2 and !is_chatting:
-		if dir.x == -1:
-			$AnimatedSprite2D.play("l1")
-		if dir.x == 1:
-			$AnimatedSprite2D.play("l2")
-			
-#	if is_roaming:
-#		match current_state:
-#			IDLE:
-		#		pass
-#			NEW_DIR:
-#				dir = choose([Vector2.RIGHT,Vector2.LEFT])
-#			MOVE:
-#				move(delta)
-				
-				
-
-#func choose(array):
-#	array.shuffle()
+func _mover(delta: float) -> void:
+	# Movimento do peixe
+	if current_state == MOVE:
+		velocity = dir * velocidade
+		move_and_slide()
 	
-#	return array.front()
+	if position.x < limite_x_min:
+		position.x = limite_x_min
+		dir.x = abs(dir.x)  # Muda direção para a direita
+	elif position.x > limite_x_max:
+		position.x = limite_x_max
+		dir.x = -abs(dir.x)  # Muda direção para a esquerda
 
-#func move(delta):
-#	if !is_chatting:
-#		position += dir * speed * delta
-		# Verifica e corrige a posição no eixo X
-#		if position.x < 1117:
-	#		position.x = 1117
-#		elif position.x > 1700:
-	#		position.x = 1700
-			
-#		if position.y > 668:
-#			position.y = 668		
+	if position.y < limite_y_min:
+		dir.y = abs(dir.y)  # Muda direção para baixo
+	elif position.y > limite_y_max:
+		dir.y = -abs(dir.y)  # Muda direção para cima
 
+	# Controle de animações
+	if dir.x < 0:
+		$AnimatedSprite2D.play("l1")
+	elif dir.x > 0:
+		$AnimatedSprite2D.play("l2")
 
-func _on_chat_detection_area_body_entered(body: Node2D) -> void:
-	if body.has_method("Player"):
-		player = body
-		player_in_chat_zone = true
+func _mudar_direcao():
+	current_state = NEW_DIR
+	dir = Vector2(randf() * 2 - 1, randf() * 2 - 1).normalized()
+	current_state = MOVE
 
+	# Agendar a próxima mudança de direção
+	await get_tree().create_timer(randf_range(1.5, 3.0)).timeout
+	_mudar_direcao()
 
-func _on_chat_detection_area_body_exited(body: Node2D) -> void:
-		if body.has_method("Player"):
-			player = body
-			player_in_chat_zone = false
-			
-
-
-
-#func _on_timer_timeout() -> void:
-#	$Timer.wait_time = choose([0.5,1,1.5])
-#	current_state = choose([IDLE, NEW_DIR, MOVE])
+func _reverter_direcao():
+	# Faz o peixe mudar de direção quando sair dos limites
+	dir = -dir

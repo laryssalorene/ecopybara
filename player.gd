@@ -21,6 +21,18 @@ func _process(delta):
 	_movimentar_personagem(delta)
 	_manter_dentro_dos_limites()
 
+func get_velocidade():
+	return velocidade
+
+func set_velocidade(x):
+	velocidade = x
+
+func get_pulo_forca():
+	return pulo_forca
+
+func set_pulo_forca(x):
+	pulo_forca = x
+
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_interact2"):
 		var actionables = actionable_finder.get_overlapping_areas()
@@ -36,6 +48,8 @@ func _movimentar_personagem(delta):
 	# Verificar se as teclas de movimento estão sendo pressionadas
 	if Input.is_action_pressed("ui_interact"):
 		Global.apertou = 1
+		await get_tree().create_timer(0.1).timeout
+		Global.apertou = 0
 	if Input.is_action_pressed("ui_right"):
 		movimento.x += velocidade
 		$AnimatedSprite2D.play("Andar")
@@ -54,6 +68,11 @@ func _movimentar_personagem(delta):
 	# Aplicar a gravidade
 	if not is_on_floor():
 		velocity.y += gravidade * delta
+	
+	if Input.is_action_just_pressed("ui_down"):
+		collision_mask = 0
+		await get_tree().create_timer(0.1).timeout
+		collision_mask = 1
 	
 	# Usar o movimento calculado para mover o personagem
 	velocity.x = movimento.x

@@ -1,5 +1,11 @@
-res://MainScene.tscn
+res://ribeirinhos.tscn
+res://player.gd
 res://MainScreen.tscn
 res://DesafioNorte/desafio_rio.tscn
-res://f1.tscn
 res://player.tscn
+res://MainScene.tscn
+res://f1.tscn
+res://helpers/actionable.tscn
+res://helpers/actionable.gd
+res://f_1.gd
+res://peixe_1.gd

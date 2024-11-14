@@ -1,0 +1,300 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d7852"]
+
+[resource]
+script = ExtResource("1_d7852")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Criança", "Capivara")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Tu viu o banzeiro ontem? A água subiu com tanta força que arrastou tudo, inclusive o lixo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tu viu o banzeiro ontem? A água subiu com tanta força que arrastou tudo, inclusive o lixo.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Oxente, capivara, esse banzeiro foi forte demais! A água subiu mais que o normal e trouxe esse monte de lixo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oxente, capivara, esse banzeiro foi forte demais! A água subiu mais que o normal e trouxe esse monte de lixo.",
+"type": &"dialogue"
+},
+"13": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "O rio já tá ficando sujo demais. Se a gente não fizer algo agora, o rio vai sofrer com isso!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "O rio já tá ficando sujo demais. Se a gente não fizer algo agora, o rio vai sofrer com isso!",
+"type": &"dialogue"
+},
+"14": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Já vi plástico até no meu anzol, capivara! O rio tá todo sujo, não dá pra pescar direito.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Já vi plástico até no meu anzol, capivara! O rio tá todo sujo, não dá pra pescar direito.",
+"type": &"dialogue"
+},
+"16": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Esse lixo não vai desaparecer sozinho, menino. O banzeiro só trouxe mais sujeira pras margens.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Esse lixo não vai desaparecer sozinho, menino. O banzeiro só trouxe mais sujeira pras margens.",
+"type": &"dialogue"
+},
+"17": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "E o pior é que o povo continua jogando mais lixo na água. Eu falo, mas parece que ninguém ouve.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "E o pior é que o povo continua jogando mais lixo na água. Eu falo, mas parece que ninguém ouve.",
+"type": &"dialogue"
+},
+"19": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "A água tá ficando turva e cheia de plásticos, garrafas e outros restos... Isso prejudica todo o ecossistema.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "A água tá ficando turva e cheia de plásticos, garrafas e outros restos... Isso prejudica todo o ecossistema.",
+"type": &"dialogue"
+},
+"20": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Eu vou ter que fazer alguma coisa. Se o pessoal não se mexer, o rio vai acabar virando um lugar de sujeira.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu vou ter que fazer alguma coisa. Se o pessoal não se mexer, o rio vai acabar virando um lugar de sujeira.",
+"type": &"dialogue"
+},
+"22": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Eu sei que a galera não se importa muito, mas é a nossa responsabilidade ensinar o povo a cuidar do rio.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu sei que a galera não se importa muito, mas é a nossa responsabilidade ensinar o povo a cuidar do rio.",
+"type": &"dialogue"
+},
+"23": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "25",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Vou reunir o povo da vila, capivara! Se a gente se juntar, dá pra limpar tudo rapidinho.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vou reunir o povo da vila, capivara! Se a gente se juntar, dá pra limpar tudo rapidinho.",
+"type": &"dialogue"
+},
+"25": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Vamo juntar as forças da vila! Se cada um cuidar do seu pedacinho de rio, a coisa melhora rapidinho.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vamo juntar as forças da vila! Se cada um cuidar do seu pedacinho de rio, a coisa melhora rapidinho.",
+"type": &"dialogue"
+},
+"26": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "28",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Mas, eu tenho medo de que, depois dessa limpeza, o pessoal vá esquecer e começar tudo de novo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mas, eu tenho medo de que, depois dessa limpeza, o pessoal vá esquecer e começar tudo de novo.",
+"type": &"dialogue"
+},
+"28": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Eu vou te ajudar, pode contar comigo. Juntos, a gente vai mostrar pra todo mundo que a natureza precisa de cuidado!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu vou te ajudar, pode contar comigo. Juntos, a gente vai mostrar pra todo mundo que a natureza precisa de cuidado!",
+"type": &"dialogue"
+},
+"29": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "31",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Vamo nessa, capivara! Se a gente fizer a nossa parte, o rio vai melhorar, e a galera vai começar a ver a importância de cuidar do rio!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vamo nessa, capivara! Se a gente fizer a nossa parte, o rio vai melhorar, e a galera vai começar a ver a importância de cuidar do rio!",
+"type": &"dialogue"
+},
+"3": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Pss...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pss...",
+"type": &"dialogue"
+},
+"31": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
+"next_id": "33",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Você consegue perguntar aos peixes onde está o local mais poluído do rio?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Você consegue perguntar aos peixes onde está o local mais poluído do rio?",
+"type": &"dialogue"
+},
+"33": {
+"id": "33",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"4": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Pss... Pss...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pss... Pss...",
+"type": &"dialogue"
+},
+"5": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Pss...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pss...",
+"type": &"dialogue"
+},
+"7": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Quié",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Quié",
+"type": &"dialogue"
+},
+"8": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Égua, eu tô sonhando ou essa capivara tá falando?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Égua, eu tô sonhando ou essa capivara tá falando?",
+"type": &"dialogue"
+}
+}
+raw_text = "~ start
+
+Criança: Pss...
+Criança: Pss... Pss...
+Criança: Pss...
+
+Capivara: Quié
+Criança: Égua, eu tô sonhando ou essa capivara tá falando?
+
+Capivara: Tu viu o banzeiro ontem? A água subiu com tanta força que arrastou tudo, inclusive o lixo.
+Criança: Oxente, capivara, esse banzeiro foi forte demais! A água subiu mais que o normal e trouxe esse monte de lixo.
+
+Capivara: O rio já tá ficando sujo demais. Se a gente não fizer algo agora, o rio vai sofrer com isso!
+Criança: Já vi plástico até no meu anzol, capivara! O rio tá todo sujo, não dá pra pescar direito.
+
+Capivara: Esse lixo não vai desaparecer sozinho, menino. O banzeiro só trouxe mais sujeira pras margens.
+Criança: E o pior é que o povo continua jogando mais lixo na água. Eu falo, mas parece que ninguém ouve.
+
+Capivara: A água tá ficando turva e cheia de plásticos, garrafas e outros restos... Isso prejudica todo o ecossistema.
+Criança: Eu vou ter que fazer alguma coisa. Se o pessoal não se mexer, o rio vai acabar virando um lugar de sujeira.
+
+Capivara: Eu sei que a galera não se importa muito, mas é a nossa responsabilidade ensinar o povo a cuidar do rio.
+Criança: Vou reunir o povo da vila, capivara! Se a gente se juntar, dá pra limpar tudo rapidinho.
+
+Capivara: Vamo juntar as forças da vila! Se cada um cuidar do seu pedacinho de rio, a coisa melhora rapidinho.
+Criança: Mas, eu tenho medo de que, depois dessa limpeza, o pessoal vá esquecer e começar tudo de novo.
+
+Capivara: Eu vou te ajudar, pode contar comigo. Juntos, a gente vai mostrar pra todo mundo que a natureza precisa de cuidado!
+Criança: Vamo nessa, capivara! Se a gente fizer a nossa parte, o rio vai melhorar, e a galera vai começar a ver a importância de cuidar do rio!
+
+Criança: Você consegue perguntar aos peixes onde está o local mais poluído do rio?
+
+=> END"
+metadata/dialogue_manager_version = "2.44.0"
