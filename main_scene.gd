@@ -15,7 +15,7 @@ func _iniciar_player():
 
 func _process(delta):
 	if Global.interagir == 1 and Global.apertou == 1:
-		get_tree().change_scene_to_file("res://f1.tscn")
+		get_tree().change_scene_to_file("res://ribeirinhos.tscn")
 		Global.apertou = 0
 
 func _on_area_2d_body_exited(body: CharacterBody2D) -> void:
