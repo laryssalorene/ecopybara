@@ -6,6 +6,7 @@ var player = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = $Player
+	player.position.y = Global.local
 	randomize()
 	pass
 
@@ -26,7 +27,14 @@ func _process(delta: float) -> void:
 	hp(player.get_hp())
 	coleta(player.get_coleta())
 	pont()
-	pass
+	if player.get_pont() >= 1000:
+		cabo()
+
+func cabo():
+	player.set_speed(0)
+	player.position.y -= 1
+	if player.position.y <= -50:
+		get_tree().quit()
 
 func _on_timer_timeout() -> void:
 	if (player.get_pont() <= 1000):

@@ -15,3 +15,6 @@ func _on_Info_pressed():
 	else:
 		$Info2.hide()
 		info = 0
+
+func _on_sair_pressed() -> void:
+	get_tree().quit()

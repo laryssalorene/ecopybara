@@ -1,31 +1,52 @@
 extends Node2D
 
 var player: CharacterBody2D
-var last_y_position: float = 0.0  # Variável para armazenar a última posição Y
+var last_y_position: float = 0.0
+var parou = 0
+var falou = 0
+var mudar = 0
 
-# Chamado quando o nó entra na árvore de cena pela primeira vez.
 func _ready() -> void:
-	# Obtém o nó do Player, que deve ser um CharacterBody2D.
-	player = $Player  # Supondo que o Player seja um nó filho de Node2D
+	player = $Player
 	
 	if player == null:
 		print("O Player não foi encontrado!")
 		return
 	
-	# Define a escala inicial para 1,1
 	player.scale = Vector2(1, 1)
 	last_y_position = player.position.y
 
-# Chamado a cada frame. 'delta' é o tempo decorrido desde o quadro anterior.
+func iluminar():
+	if $ColorRect.self_modulate.a >= 0 and parou == 0:
+		$ColorRect.self_modulate.a -= 0.005
+	else:
+		parou = 1
+
+func escurecer():
+	if falou == 1:
+		$ColorRect.self_modulate.a += 0.01
+
 func _process(delta: float) -> void:
+	iluminar()
+	escurecer()
 	player.set_velocidade(200*(player.position.y/560))
-	player.set_pulo_forca(500*(player.position.y/560))
 	player.scale = Vector2((player.position.y/560), (player.position.y/560))
 	
-	# Atualiza a última posição Y para o próximo quadro
-	last_y_position = player.position.y
+	if Input.is_action_pressed("ui_interact"):
+		$Timer.start()
+		falou = 1
 	
-	# Verifica se a posição X do Player é menor que 0
-	if player.position.x >= 1140:
-		# Troca a cena para "f1.tscn"
-		get_tree().change_scene_to_file("res://f1.tscn")
+	if mudar == 1:
+		mudar = 2
+		$Timer2.start()
+		falou = 1
+	
+	if player.position.y <= 285:
+		if mudar != 2:
+			mudar = 1
+
+func _on_timer_timeout() -> void:
+	get_tree().change_scene_to_file("res://ribeirinhosFase.tscn")
+
+func _on_timer_2_timeout() -> void:
+	get_tree().change_scene_to_file("res://DesafioNorte/desafio_antes.tscn")

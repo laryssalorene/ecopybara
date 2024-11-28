@@ -15,6 +15,7 @@ extends CharacterBody2D
 var movimento = Vector2()  # Vetor que armazena o movimento atual
 
 func _ready():
+	$AnimatedSprite2D.play("Agua")
 	$AnimatedSprite2D.scale.x = -abs($AnimatedSprite2D.scale.x)
 
 func _process(delta):
@@ -30,20 +31,14 @@ func set_velocidade(x):
 func get_pulo_forca():
 	return pulo_forca
 
-func set_pulo_forca(x):
-	pulo_forca = x
-
-func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_interact2"):
-		var actionables = actionable_finder.get_overlapping_areas()
-		if actionables.size() > 0:
-			actionables[0].action()
-			return
-
 # Função para movimentar o personagem
 func _movimentar_personagem(delta):
 	# Resetar o movimento horizontal
 	movimento.x = 0
+	if movimento.y > 0:
+		movimento.y -= 10
+	elif movimento.y < 0:
+		movimento.y += 10
 	
 	# Verificar se as teclas de movimento estão sendo pressionadas
 	if Input.is_action_pressed("ui_interact"):
@@ -52,27 +47,18 @@ func _movimentar_personagem(delta):
 		Global.apertou = 0
 	if Input.is_action_pressed("ui_right"):
 		movimento.x += velocidade
-		$AnimatedSprite2D.play("Andar")
 		$AnimatedSprite2D.scale.x = -abs($AnimatedSprite2D.scale.x)
 	elif Input.is_action_pressed("ui_left"):
 		movimento.x -= velocidade
 		$AnimatedSprite2D.scale.x = abs($AnimatedSprite2D.scale.x)
-		$AnimatedSprite2D.play("Andar")
-	elif movimento.x == 0:
-		$AnimatedSprite2D.play("Parada")
 	
-	if Input.is_action_just_pressed("ui_up") and is_on_floor():
-		velocity.y = -pulo_forca
-	
-	if not is_on_floor():
-		velocity.y += gravidade * delta
-	
-	if Input.is_action_just_pressed("ui_down"):
-		collision_mask = 0
-		await get_tree().create_timer(0.1).timeout
-		collision_mask = 1
+	if Input.is_action_pressed("ui_up"):
+		movimento.y = -velocidade
+	elif Input.is_action_pressed("ui_down"):
+		movimento.y = velocidade
 	
 	velocity.x = movimento.x
+	velocity.y = movimento.y
 	move_and_slide()
 
 # Função para garantir que o player não saia dos limites da fase

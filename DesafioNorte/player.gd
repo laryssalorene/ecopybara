@@ -18,6 +18,10 @@ func get_coleta():
 func get_pont():
 	return pont
 
+func set_speed(x):
+	speed = x
+	y_min_limit = -200
+
 func coleta_lixo():
 	pont += 10
 	if Global.craft == false:

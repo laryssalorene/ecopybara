@@ -100,7 +100,7 @@ script = ExtResource("1_mg3d3")
 [node name="cenario" type="StaticBody2D" parent="."]
 
 [node name="background" type="Sprite2D" parent="cenario"]
-position = Vector2(591, 316)
+position = Vector2(588, 316)
 scale = Vector2(0.657924, 0.65625)
 texture = ExtResource("1_fy4ps")
 
@@ -159,7 +159,7 @@ sprite_frames = SubResource("SpriteFrames_udqfj")
 shape = SubResource("CircleShape2D_8kqw4")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(100, 532)
+position = Vector2(220, 330)
 script = ExtResource("8_opi40")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -180,3 +180,14 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Direction/ActionableFinder"]
 shape = SubResource("RectangleShape2D_asdvn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bug31rrf7hjtm"]
+[gd_scene load_steps=11 format=3 uid="uid://bug31rrf7hjtm"]
 
 [ext_resource type="Texture2D" uid="uid://q6hl3lfqo3ea" path="res://Backgrounds/BG.jpg" id="1"]
 [ext_resource type="FontFile" uid="uid://despp4nmxkkse" path="res://Fonte/PressStart2P-Regular.ttf" id="3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c05eo0ehgtcax" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow.png" id="4_nyexx"]
 [ext_resource type="Texture2D" uid="uid://goutmx5lftab" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-=.png" id="5_p6032"]
 [ext_resource type="AudioStream" uid="uid://ckb1yfludui1c" path="res://Sons/start screen.mp3" id="6_56du3"]
+[ext_resource type="Texture2D" uid="uid://cx6mte58v7nnd" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-x.png" id="6_n0s8q"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
@@ -88,6 +89,20 @@ icon = ExtResource("5_p6032")
 flat = true
 expand_icon = true
 
+[node name="Sair" type="Button" parent="."]
+offset_left = -194.0
+offset_top = 159.0
+offset_right = 46.0
+offset_bottom = 229.0
+theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
+theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_fonts/font = SubResource("1")
+text = "SAIR"
+icon = ExtResource("6_n0s8q")
+flat = true
+expand_icon = true
+
 [node name="Label" type="Label" parent="."]
 offset_left = -364.0
 offset_top = -270.0
@@ -124,3 +139,4 @@ autoplay = true
 
 [connection signal="pressed" from="Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="Info" to="." method="_on_Info_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

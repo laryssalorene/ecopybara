@@ -6,10 +6,10 @@ extends CharacterBody2D
 var dir = Vector2(1, 0)  # Direção inicial
 var is_roaming = true
 var roaming_bounds = Rect2(Vector2.ZERO, Vector2.ZERO)
-@export var limite_x_min = 575
-@export var limite_x_max = 1125
-@export var limite_y_min = 590
-@export var limite_y_max = 630
+@export var limite_x_min = 100
+@export var limite_x_max = 1025
+@export var limite_y_min = 50
+@export var limite_y_max = 580
 
 # Estados
 enum {
