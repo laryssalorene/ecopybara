@@ -1,8 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://c00rys5v1nyig"]
+[gd_scene load_steps=10 format=3 uid="uid://c00rys5v1nyig"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_udvj4"]
 [ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://Sprites/Capivara/capivarinhas.png" id="2_pf3gw"]
+[ext_resource type="Shader" path="res://player.gdshader" id="4_5jedb"]
 [ext_resource type="Texture2D" uid="uid://dsq083nxym801" path="res://Sprites/Capivara/aaa.png" id="4_c30xd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_caeh0"]
+shader = ExtResource("4_5jedb")
+shader_parameter/light_color = Color(0, 0, 0, 0.784314)
+shader_parameter/radius = 100.0
+shader_parameter/flicker_intensity = 0.04
+shader_parameter/flicker_speed = 0.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtikh"]
 atlas = ExtResource("2_pf3gw")
@@ -40,10 +48,17 @@ size = Vector2(50, 84)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_udvj4")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_caeh0")
+offset_left = -60.0
+offset_top = 29.0
+offset_right = 72.0
+offset_bottom = 61.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.219403, 0.219403)
+scale = Vector2(0.219, 0.219)
 sprite_frames = SubResource("SpriteFrames_of46r")
-animation = &"Andar"
+animation = &"Parada"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

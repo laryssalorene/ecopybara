@@ -10,8 +10,8 @@ var fogoL = 1
 
 func _ready():
 	_iniciar_player()
-	$ColorRect2.self_modulate.a = 0.1
-	$ColorRect3.self_modulate.a = 0.1
+	#$ColorRect2.self_modulate.a = 0.1
+	#$ColorRect3.self_modulate.a = 0.1
 
 func iluminar():
 	if $ColorRect.self_modulate.a >= 0 and parou == 0:
@@ -35,7 +35,7 @@ func _process(delta):
 		Global.apertou = 0
 	iluminar()
 	escurecer()
-	fogo()
+	#fogo()
 
 func _on_area_2d_body_exited(body: CharacterBody2D) -> void:
 	Global.interagir = 0

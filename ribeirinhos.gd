@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 	iluminar()
 	escurecer()
 	player.set_velocidade(200*(player.position.y/560))
+	player.set_pulo_forca(500*(player.position.y/560))
 	player.scale = Vector2((player.position.y/560), (player.position.y/560))
 	
 	if Input.is_action_pressed("ui_interact"):
@@ -41,7 +42,7 @@ func _process(delta: float) -> void:
 		$Timer2.start()
 		falou = 1
 	
-	if player.position.y <= 285:
+	if player.position.y <= 285 and get_tree().get_current_scene().name == "ribeirinhos1":
 		if mudar != 2:
 			mudar = 1
 

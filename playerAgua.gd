@@ -31,6 +31,9 @@ func set_velocidade(x):
 func get_pulo_forca():
 	return pulo_forca
 
+func set_pulo_forca(x):
+	pulo_forca = x
+
 # Função para movimentar o personagem
 func _movimentar_personagem(delta):
 	# Resetar o movimento horizontal

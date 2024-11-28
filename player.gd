@@ -16,6 +16,7 @@ var movimento = Vector2()  # Vetor que armazena o movimento atual
 
 func _ready():
 	$AnimatedSprite2D.scale.x = -abs($AnimatedSprite2D.scale.x)
+	$ColorRect.position.x = -65
 
 func _process(delta):
 	_movimentar_personagem(delta)
@@ -65,7 +66,11 @@ func _movimentar_personagem(delta):
 		velocity.y = -pulo_forca
 	
 	if not is_on_floor():
+		$ColorRect.hide()
 		velocity.y += gravidade * delta
+	
+	if is_on_floor():
+		$ColorRect.show()
 	
 	if Input.is_action_just_pressed("ui_down"):
 		collision_mask = 0

@@ -1,6 +1,7 @@
+ColorRect
+PointLight2D
 CollisionShape2D
 CanvasModulate
-ColorRect
 Button
 Timer
 Area2D

@@ -55,7 +55,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc03e"]
 size = Vector2(50, 52.5)
 
-[node name="ribeirinhos" type="Node2D"]
+[node name="ribeirinhos1" type="Node2D"]
 position = Vector2(1, 0)
 script = ExtResource("1_xgywg")
 
