@@ -10,8 +10,7 @@ var fogoL = 1
 
 func _ready():
 	_iniciar_player()
-	#$ColorRect2.self_modulate.a = 0.1
-	#$ColorRect3.self_modulate.a = 0.1
+	$ColorRect.show()
 
 func iluminar():
 	if $ColorRect.self_modulate.a >= 0 and parou == 0:

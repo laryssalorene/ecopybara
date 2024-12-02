@@ -5,8 +5,8 @@ var parou = 0
 
 # Chamado quando o nó entra na árvore de cena pela primeira vez.
 func _ready() -> void:
-	# Certifique-se de que o nó 'Player' existe na cena.
 	player = $Player  # O nó Player deve ser um filho de Node2D
+	$ColorRect.show()
 	
 	if player == null:
 		print("O Player não foi encontrado!")

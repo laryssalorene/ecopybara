@@ -20,24 +20,24 @@ func _spawn_item():
 	else:
 		item.set_item_type(item.ItemType.LIXO_COMUM)
 	if (player.get_pont() >= 200):
-		item.set_speed(200 + player.get_pont()/5)
+		item.set_speed(200 + player.get_pont()/2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:	
+func _process(delta: float) -> void:
 	hp(player.get_hp())
 	coleta(player.get_coleta())
 	pont()
-	if player.get_pont() >= 1000:
+	if player.get_pont() >= 600:
 		cabo()
 
 func cabo():
 	player.set_speed(0)
 	player.position.y -= 1
 	if player.position.y <= -50:
-		get_tree().quit()
+		get_tree().quit() #Alterar para mudança de fase
 
 func _on_timer_timeout() -> void:
-	if (player.get_pont() <= 1000):
+	if (player.get_pont() < 600):
 		_spawn_item()
 	else:
 		pass

@@ -101,6 +101,7 @@ pivot_offset = Vector2(160, 160)
 color = Color(0.999999, 0.986056, 0.602642, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -7.0
 offset_top = -6.0
 offset_right = 1159.0

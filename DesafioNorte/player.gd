@@ -31,7 +31,7 @@ func coleta_lixo():
 
 func coleta_metal():
 	if Global.craft:
-		pont += 100
+		pont += 200
 		lixo_coletado = 0
 		Global.usouRede = true
 		Global.craft = false
@@ -39,7 +39,7 @@ func coleta_metal():
 		hp -= 1
 		if hp <= 0:
 			#Implementar lógica de fim
-			get_tree().paused = true
+			get_tree().change_scene_to_file("res://DesafioNorte/desafio_rio.tscn")
 
 func _process(delta):
 	var movimento = Vector2()

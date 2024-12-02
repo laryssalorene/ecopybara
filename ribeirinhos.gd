@@ -8,6 +8,7 @@ var mudar = 0
 
 func _ready() -> void:
 	player = $Player
+	$ColorRect.show()
 	
 	if player == null:
 		print("O Player não foi encontrado!")
