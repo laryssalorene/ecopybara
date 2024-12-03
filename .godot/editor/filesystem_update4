@@ -1,18 +1,11 @@
-res://ui/text box/text_box.tscn
+res://MainScene.tscn
 res://player.gdshader
 res://MainScene.gdshader
+res://Estatua.gdshader
 res://MainScreen.tscn
 res://player.tscn
-res://MainScene.tscn
 res://ribeirinhos.tscn
 res://ribeirinhosFase.tscn
 res://DesafioNorte/desafio_antes.tscn
 res://DesafioNorte/desafio_rio.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.gd
-res://DesafioNorte/desafio_antes.gd
-res://main_scene.gd
-res://ribeirinhos.gd
-res://DesafioNorte/desafio_rio.gd
-res://DesafioNorte/player.gd
 res://DesafioNorte/lixo.tscn
