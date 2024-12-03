@@ -1,9 +1,9 @@
+Timer
 ColorRect
 PointLight2D
 CollisionShape2D
 CanvasModulate
 Button
-Timer
 Area2D
 AnimatedSprite2D
 Sprite2D

@@ -1,5 +1,5 @@
 c693a20e708c4e09bfa9edf12a750cf8
-::res://::1733233685
+::res://::1733239039
 actionable.gd::GDScript::-1::1731597339::0::1::::<>Area2D<>::
 criança.gd::GDScript::-1::1731597339::0::1::::<>Area2D<>::
 dialogue_manager.gd::GDScript::-1::1731597339::0::1::::<>RefCounted<>::
@@ -7,19 +7,20 @@ f1.tscn::PackedScene::4373752788401193282::1732833133::0::1::::<><>::uid://cmg7q
 f_1.gd::GDScript::-1::1731621357::0::1::::<>Node2D<>::
 global.gd::GDScript::-1::1732788823::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::599234268071361945::1731597339::1731599495::1::::<><>::
-MainScene.gdshader::Shader::-1::1733189440::0::1::::<><>::
-MainScene.tscn::PackedScene::4270281078357176008::1733182684::0::1::::<><>::res://main_scene.gd<>uid://cafs0ndws1ig1::::res://Backgrounds/cave.png<>uid://c00rys5v1nyig::::res://player.tscn<>uid://ddq0nfpwpdtm0::::res://Sprites/Estatuas/iara.png<>res://MainScene.gdshader
+MainScene.gdshader::Shader::-1::1733239039::0::1::::<><>::
+MainScene.tscn::PackedScene::4270281078357176008::1733239039::0::1::::<><>::res://main_scene.gd<>uid://cafs0ndws1ig1::::res://Backgrounds/cave.png<>uid://c00rys5v1nyig::::res://player.tscn<>uid://ddq0nfpwpdtm0::::res://Sprites/Estatuas/iara.png<>res://MainScene.gdshader<>res://Estatua.gdshader
 MainScreen.gd::GDScript::-1::1732762363::0::1::::<>CanvasLayer<>::
-MainScreen.tscn::PackedScene::3804331248845949262::1733182683::0::1::::<><>::uid://q6hl3lfqo3ea::::res://Backgrounds/BG.jpg<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf<>res://MainScreen.gd<>uid://c05eo0ehgtcax::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow.png<>uid://goutmx5lftab::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-=.png<>uid://ckb1yfludui1c::::res://Sons/start screen.mp3<>uid://cx6mte58v7nnd::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-x.png
+MainScreen.tscn::PackedScene::3804331248845949262::1733239038::0::1::::<><>::uid://q6hl3lfqo3ea::::res://Backgrounds/BG.jpg<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf<>res://MainScreen.gd<>uid://c05eo0ehgtcax::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow.png<>uid://goutmx5lftab::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-=.png<>uid://ckb1yfludui1c::::res://Sons/start screen.mp3<>uid://cx6mte58v7nnd::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-x.png
 main_scene.gd::GDScript::-1::1732979536::0::1::::<>Node2D<>::
 peixe_1.gd::GDScript::-1::1732788128::0::1::::<>CharacterBody2D<>::
 player.gd::GDScript::-1::1732832940::0::1::::<>CharacterBody2D<>::
-player.gdshader::Shader::-1::1733189440::0::1::::<><>::
-player.tscn::PackedScene::6580247942873116190::1733182683::0::1::::<><>::res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>res://player.gdshader<>uid://dsq083nxym801::::res://Sprites/Capivara/aaa.png
+player.gdshader::Shader::-1::1733239039::0::1::::<><>::
+player.tscn::PackedScene::6580247942873116190::1733239038::0::1::::<><>::res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>res://player.gdshader<>uid://dsq083nxym801::::res://Sprites/Capivara/aaa.png
 playerAgua.gd::GDScript::-1::1732833438::0::1::::<>CharacterBody2D<>::
+Estatua.gdshader::Shader::-1::1733239039::0::1::::<><>::
 ribeirinhos.gd::GDScript::-1::1732979536::0::1::::<>Node2D<>::
-ribeirinhos.tscn::PackedScene::846262316409327889::1733182684::0::1::::<><>::uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>res://ribeirinhos.gd<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn<>res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>uid://dl0vrvaopu0ub::::res://Sprites/Capivara/aaa2.png<>res://player.gdshader
-ribeirinhosFase.tscn::PackedScene::8163132745458481074::1733182684::0::1::::<><>::res://ribeirinhos.gd<>uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>res://playerAgua.gd<>uid://cqjfym1dfs582::::res://Sprites/Capivara/cabeça.png<>uid://d00ed3qx48uya::::res://Sprites/Capivara/cabeça2.png
+ribeirinhos.tscn::PackedScene::846262316409327889::1733239039::0::1::::<><>::uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>res://ribeirinhos.gd<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn<>res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>uid://dl0vrvaopu0ub::::res://Sprites/Capivara/aaa2.png<>res://player.gdshader
+ribeirinhosFase.tscn::PackedScene::8163132745458481074::1733239039::0::1::::<><>::res://ribeirinhos.gd<>uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>res://playerAgua.gd<>uid://cqjfym1dfs582::::res://Sprites/Capivara/cabeça.png<>uid://d00ed3qx48uya::::res://Sprites/Capivara/cabeça2.png
 state.gd::GDScript::-1::1731597339::0::1::::<>Node<>::
 ::res://addons/::1731624185
 ::res://addons/dialogue_manager/::1731624185
@@ -90,19 +91,20 @@ main_view.gd::GDScript::-1::1731597369::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1731597369::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
 settings_view.gd::GDScript::-1::1731597369::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1731597369::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://Backgrounds/::1731624185
+::res://Backgrounds/::1733239233
 bckR.jpg::CompressedTexture2D::3235790612373992823::1731597369::1731599498::1::::<><>::
 BG.jpg::CompressedTexture2D::1187463359162484168::1731597369::1731599497::1::::<><>::
 bg.png::CompressedTexture2D::2310628432973216738::1731597369::1731599498::1::::<><>::
 cave.png::CompressedTexture2D::4784301495336549622::1731597369::1731599498::1::::<><>::
 Dirtyriver.png::CompressedTexture2D::4104464464127281940::1731597369::1731599498::1::::<><>::
-::res://DesafioNorte/::1733182684
+river.png::CompressedTexture2D::5640740324620996161::1733239233::1733239235::1::::<><>::
+::res://DesafioNorte/::1733239039
 desafio_antes.gd::GDScript::-1::1732979536::0::1::::<>Node2D<>::
-desafio_antes.tscn::PackedScene::7409284619069346066::1733182684::0::1::::<><>::res://DesafioNorte/desafio_antes.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>res://DesafioNorte/player2.gd<>res://peixe_1.gd<>uid://rhsuy57tmoeo::::res://npcs/animais/peixe1.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn
+desafio_antes.tscn::PackedScene::7409284619069346066::1733239039::0::1::::<><>::res://DesafioNorte/desafio_antes.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>res://DesafioNorte/player2.gd<>res://peixe_1.gd<>uid://rhsuy57tmoeo::::res://npcs/animais/peixe1.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn
 desafio_rio.gd::GDScript::-1::1732980046::0::1::::<>Node2D<>::
-desafio_rio.tscn::PackedScene::8457240419063336166::1733182684::0::1::::<><>::res://DesafioNorte/desafio_rio.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>uid://c57x0l2tdgo13::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Heart.png<>uid://wm0whauuvmcv::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-heart.png<>uid://dtvcdglax600j::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Coin.png<>uid://clvqcbqhsyr7n::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-coin.png<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf
+desafio_rio.tscn::PackedScene::8457240419063336166::1733239039::0::1::::<><>::res://DesafioNorte/desafio_rio.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>uid://c57x0l2tdgo13::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Heart.png<>uid://wm0whauuvmcv::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-heart.png<>uid://dtvcdglax600j::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Coin.png<>uid://clvqcbqhsyr7n::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-coin.png<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf
 lixo.gd::GDScript::-1::1731597369::0::1::::<>Area2D<>::
-lixo.tscn::PackedScene::7741417051876344282::1733182684::0::1::::<><>::res://DesafioNorte/lixo.gd
+lixo.tscn::PackedScene::7741417051876344282::1733239039::0::1::::<><>::res://DesafioNorte/lixo.gd
 player2.gd::GDScript::-1::1732787994::0::1::::<>CharacterBody2D<>::
 player.gd::GDScript::-1::1732979913::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::1311129968374632858::1731597370::0::1::::<><>::res://DesafioNorte/player.gd

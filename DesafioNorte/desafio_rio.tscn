@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsq0rqjssfqc1"]
+[gd_scene load_steps=12 format=3 uid="uid://dsq0rqjssfqc1"]
 
 [ext_resource type="Script" path="res://DesafioNorte/desafio_rio.gd" id="1_b41w0"]
 [ext_resource type="Texture2D" uid="uid://byqh6ve4guyl5" path="res://Backgrounds/Dirtyriver.png" id="2_acq0p"]
 [ext_resource type="PackedScene" uid="uid://sxeebt8tpf1k" path="res://DesafioNorte/player.tscn" id="2_gf6oa"]
 [ext_resource type="Texture2D" uid="uid://c57x0l2tdgo13" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Heart.png" id="3_pae8v"]
+[ext_resource type="Texture2D" uid="uid://cmmof0nk5t14h" path="res://Backgrounds/river.png" id="3_pw0c3"]
 [ext_resource type="Texture2D" uid="uid://wm0whauuvmcv" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-heart.png" id="4_tw8hi"]
 [ext_resource type="Texture2D" uid="uid://dtvcdglax600j" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Coin.png" id="5_75gkd"]
 [ext_resource type="Texture2D" uid="uid://clvqcbqhsyr7n" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-coin.png" id="6_ocj6m"]
@@ -54,6 +55,11 @@ script = ExtResource("1_b41w0")
 position = Vector2(576, 337)
 scale = Vector2(0.642857, 0.658203)
 texture = ExtResource("2_acq0p")
+
+[node name="River" type="Sprite2D" parent="."]
+position = Vector2(576, 337)
+scale = Vector2(0.643, 0.658)
+texture = ExtResource("3_pw0c3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -144,4 +150,9 @@ theme_override_fonts/font = ExtResource("7_gier2")
 theme_override_font_sizes/font_size = 24
 text = "0"
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
