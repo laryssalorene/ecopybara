@@ -1,0 +1,226 @@
+[gd_scene load_steps=16 format=3 uid="uid://dokjur3uywic5"]
+
+[ext_resource type="Script" path="res://ribeirinhos.gd" id="1_xgywg"]
+[ext_resource type="Texture2D" uid="uid://bmdo87ognhet0" path="res://Backgrounds/bckR.jpg" id="2_mscnc"]
+[ext_resource type="Texture2D" uid="uid://dr8nuhqpvc1fq" path="res://npcs/humans/hf2.png" id="3_j4yy0"]
+[ext_resource type="Texture2D" uid="uid://6b544cpiymvh" path="res://npcs/humans/hf1.png" id="4_7p706"]
+[ext_resource type="Texture2D" uid="uid://c7cysic7h6fv0" path="res://npcs/humans/criRib.png" id="5_h80g7"]
+[ext_resource type="Texture2D" uid="uid://61vci1d2wkk" path="res://npcs/humans/criaRibf.png" id="6_gfjrl"]
+[ext_resource type="Script" path="res://playerAgua.gd" id="7_cmnny"]
+[ext_resource type="Texture2D" uid="uid://cqjfym1dfs582" path="res://Sprites/Capivara/cabeça.png" id="8_kbkqj"]
+[ext_resource type="Texture2D" uid="uid://d00ed3qx48uya" path="res://Sprites/Capivara/cabeça2.png" id="9_dj4as"]
+[ext_resource type="AudioStream" uid="uid://cgsr007cokuk5" path="res://musicas/nadando.mp3" id="10_mjayq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iho4"]
+size = Vector2(1182, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtt87"]
+size = Vector2(20, 48.125)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udqfj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_h80g7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gfjrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h80g7")
+}],
+"loop": true,
+"name": &"falando",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d38gd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kbkqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dj4as")
+}],
+"loop": true,
+"name": &"Agua",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc03e"]
+size = Vector2(50, 52.5)
+
+[node name="ribeirinhos1" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_xgywg")
+
+[node name="cenario" type="StaticBody2D" parent="."]
+
+[node name="background" type="Sprite2D" parent="cenario"]
+position = Vector2(588, 316)
+scale = Vector2(0.657924, 0.65625)
+texture = ExtResource("2_mscnc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario"]
+position = Vector2(655, 563.5)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="cenario"]
+position = Vector2(272, 512)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="cenario"]
+position = Vector2(444, 1055)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="cenario"]
+position = Vector2(9, 417)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="cenario"]
+position = Vector2(-147, 466)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="cenario"]
+position = Vector2(518, -251)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="cenario"]
+position = Vector2(143, 685)
+rotation = -0.349066
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1256, 685)
+rotation = 0.349066
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="cenario"]
+position = Vector2(965, 543)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1339, 610)
+rotation = 0.261799
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="cenario"]
+position = Vector2(772, -128)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="cenario"]
+position = Vector2(757, -166)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="cenario"]
+position = Vector2(712, -256)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1299, 332)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1253, 281)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1247, 272)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1184, 247)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="cenario"]
+position = Vector2(658, -316)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="cenario"]
+position = Vector2(121, 39)
+rotation = 0.610865
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="cenario"]
+position = Vector2(2, 282)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="cenario"]
+position = Vector2(591, -306)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="cenario"]
+position = Vector2(592, 396.125)
+shape = SubResource("RectangleShape2D_dtt87")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="cenario"]
+position = Vector2(526, 541)
+shape = SubResource("RectangleShape2D_dtt87")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="cenario"]
+position = Vector2(562, 527)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_dtt87")
+
+[node name="Hf2" type="Sprite2D" parent="."]
+position = Vector2(433.688, 343.688)
+scale = Vector2(0.1561, 0.145992)
+texture = ExtResource("3_j4yy0")
+
+[node name="Hf1" type="Sprite2D" parent="."]
+position = Vector2(981.906, 386.906)
+scale = Vector2(0.201854, 0.182729)
+texture = ExtResource("4_7p706")
+
+[node name="crianca" type="AnimatedSprite2D" parent="."]
+position = Vector2(694, 541)
+scale = Vector2(0.432624, 0.417492)
+sprite_frames = SubResource("SpriteFrames_udqfj")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(483, 488)
+script = ExtResource("7_cmnny")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.219403, 0.219403)
+sprite_frames = SubResource("SpriteFrames_d38gd")
+animation = &"Agua"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -0.25)
+shape = SubResource("RectangleShape2D_jc03e")
+
+[node name="nadar" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("10_mjayq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

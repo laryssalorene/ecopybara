@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b7n5c7ksud1ro"
+path="res://.godot/imported/crianca.dialogue-1828bbdd9f4c5fbe7bc4d94fc8ef1fa9.tres"
+
+[deps]
+
+source_file="res://dialogue/crianca.dialogue"
+dest_files=["res://.godot/imported/crianca.dialogue-1828bbdd9f4c5fbe7bc4d94fc8ef1fa9.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,127 @@
+[gd_scene load_steps=17 format=3 uid="uid://ddtd3npmphi1w"]
+
+[ext_resource type="Script" path="res://DesafioNorte/desafio_antes.gd" id="1_3al2o"]
+[ext_resource type="Texture2D" uid="uid://byqh6ve4guyl5" path="res://Backgrounds/Dirtyriver.png" id="2_va0s0"]
+[ext_resource type="PackedScene" uid="uid://sxeebt8tpf1k" path="res://DesafioNorte/player.tscn" id="3_q6ows"]
+[ext_resource type="Script" path="res://DesafioNorte/player2.gd" id="4_awken"]
+[ext_resource type="Script" path="res://peixe_1.gd" id="5_koncu"]
+[ext_resource type="Texture2D" uid="uid://rhsuy57tmoeo" path="res://npcs/animais/peixe1.png" id="6_6pe52"]
+[ext_resource type="PackedScene" uid="uid://6yyim8eer220" path="res://helpers/actionable.tscn" id="7_vqnao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3vw4"]
+size = Vector2(50, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcxwb"]
+size = Vector2(1130, 596)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ucsi"]
+atlas = ExtResource("6_6pe52")
+region = Rect2(0, 111, 170, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_in6vv"]
+atlas = ExtResource("6_6pe52")
+region = Rect2(0, 0, 170, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_strwg"]
+atlas = ExtResource("6_6pe52")
+region = Rect2(170, 111, 170, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce7ht"]
+atlas = ExtResource("6_6pe52")
+region = Rect2(170, 0, 170, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duw1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ucsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_in6vv")
+}],
+"loop": true,
+"name": &"l1",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_strwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ce7ht")
+}],
+"loop": true,
+"name": &"l2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74q7x"]
+size = Vector2(130.977, 79.8025)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lumt5"]
+radius = 264.068
+
+[node name="DesafioRio" type="Node2D"]
+script = ExtResource("1_3al2o")
+
+[node name="Dirtyriver" type="Sprite2D" parent="."]
+position = Vector2(576, 337)
+scale = Vector2(0.642857, 0.658203)
+texture = ExtResource("2_va0s0")
+
+[node name="Player" parent="." instance=ExtResource("3_q6ows")]
+position = Vector2(100, 300)
+script = ExtResource("4_awken")
+velocidade = 200
+pulo_forca = 500
+gravidade = 800
+limite_esquerda = 0
+limite_direita = 1152
+limite_superior = 0
+limite_inferior = 648
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_n3vw4")
+
+[node name="Direction" type="Marker2D" parent="Player"]
+light_mask = 16
+position = Vector2(0, -3)
+
+[node name="ActionableFinder" type="Area2D" parent="Player/Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Direction/ActionableFinder"]
+position = Vector2(482, 48)
+shape = SubResource("RectangleShape2D_jcxwb")
+
+[node name="peixe1" type="CharacterBody2D" parent="."]
+position = Vector2(529, 370)
+platform_wall_layers = 153
+script = ExtResource("5_koncu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="peixe1"]
+scale = Vector2(0.488636, 0.501238)
+sprite_frames = SubResource("SpriteFrames_duw1k")
+animation = &"l2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="peixe1"]
+scale = Vector2(0.488636, 0.501238)
+shape = SubResource("RectangleShape2D_74q7x")
+disabled = true
+
+[node name="Timer" type="Timer" parent="peixe1"]
+autostart = true
+
+[node name="Actionable" parent="peixe1" instance=ExtResource("7_vqnao")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="peixe1/Actionable"]
+shape = SubResource("CircleShape2D_lumt5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="timeout" from="peixe1/Timer" to="peixe1" method="_on_timer_timeout"]

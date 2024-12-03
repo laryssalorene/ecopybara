@@ -1,0 +1,11 @@
+res://ribeirinhosFase.tscn
+res://player.gdshader
+res://MainScene.gdshader
+res://MainScreen.tscn
+res://player.tscn
+res://MainScene.tscn
+res://ribeirinhos.tscn
+res://DesafioNorte/desafio_antes.tscn
+res://DesafioNorte/desafio_rio.tscn
+res://DesafioNorte/lixo.tscn
+res://player.gd

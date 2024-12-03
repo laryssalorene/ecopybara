@@ -1,0 +1,217 @@
+[gd_scene load_steps=24 format=3 uid="uid://b13s51ynbflf1"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_7u5v8"]
+[ext_resource type="Texture2D" uid="uid://76jyh5eb1yqc" path="res://bg.png" id="1_a6fw6"]
+[ext_resource type="Script" path="res://main_scene.gd" id="1_r37f6"]
+[ext_resource type="Texture2D" uid="uid://cafs0ndws1ig1" path="res://cave.png" id="3_buu3j"]
+[ext_resource type="Script" path="res://iara.gd" id="4_frbxr"]
+[ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://capivarinhas.png" id="4_ke6n6"]
+[ext_resource type="Texture2D" uid="uid://dunlt3hog2ykq" path="res://b.png" id="5_kfb2m"]
+[ext_resource type="Texture2D" uid="uid://dl0vrvaopu0ub" path="res://aaa2.png" id="7_d5slw"]
+[ext_resource type="Texture2D" uid="uid://dx3tevgwx8ld3" path="res://iara2.png" id="7_p85fp"]
+[ext_resource type="Texture2D" uid="uid://dsq083nxym801" path="res://aaa.png" id="9_3rosd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0218c"]
+size = Vector2(1787.55, 67.8788)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eccle"]
+size = Vector2(600.531, 51.5455)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uq5bt"]
+size = Vector2(1159.5, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnccl"]
+size = Vector2(336.25, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d664"]
+size = Vector2(120, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylges"]
+size = Vector2(38, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtikh"]
+atlas = ExtResource("4_ke6n6")
+region = Rect2(343, 536, 288, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qgc8"]
+atlas = ExtResource("4_ke6n6")
+region = Rect2(652, 493, 326, 492)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm3fi"]
+atlas = ExtResource("5_kfb2m")
+region = Rect2(25, 7, 310, 420)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x6vu"]
+atlas = ExtResource("4_ke6n6")
+region = Rect2(19, 101, 267, 412)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_of46r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtikh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qgc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d5slw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3rosd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm3fi")
+}],
+"loop": true,
+"name": &"Andar",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x6vu")
+}],
+"loop": true,
+"name": &"Parada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piwd3"]
+size = Vector2(50, 84)
+
+[sub_resource type="GDScript" id="GDScript_ssn31"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_r37f6")
+
+[node name="Norte" type="StaticBody2D" parent="."]
+position = Vector2(0, 2000)
+
+[node name="Cenario" type="Sprite2D" parent="Norte"]
+position = Vector2(576, 326)
+scale = Vector2(0.647321, 0.644531)
+texture = ExtResource("1_a6fw6")
+
+[node name="Cha" type="CollisionShape2D" parent="Norte"]
+position = Vector2(577.882, 637.875)
+scale = Vector2(0.647321, 0.644531)
+shape = SubResource("RectangleShape2D_0218c")
+
+[node name="Plataforma" type="CollisionShape2D" parent="Norte"]
+position = Vector2(970.368, 486.389)
+scale = Vector2(0.647321, 0.644531)
+shape = SubResource("RectangleShape2D_eccle")
+one_way_collision = true
+
+[node name="Inicio" type="StaticBody2D" parent="."]
+
+[node name="Cave" type="Sprite2D" parent="Inicio"]
+position = Vector2(574.5, 324)
+scale = Vector2(0.646763, 0.640625)
+texture = ExtResource("3_buu3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inicio"]
+position = Vector2(572.25, 608.5)
+shape = SubResource("RectangleShape2D_uq5bt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Inicio"]
+position = Vector2(168.75, 467)
+shape = SubResource("RectangleShape2D_cnccl")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Inicio"]
+position = Vector2(984.125, 467)
+shape = SubResource("RectangleShape2D_cnccl")
+one_way_collision = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(576, 324)
+
+[node name="Iara" type="Area2D" parent="."]
+position = Vector2(600, 486)
+script = ExtResource("4_frbxr")
+
+[node name="Iara2" type="Sprite2D" parent="Iara"]
+scale = Vector2(0.225705, 0.21419)
+texture = ExtResource("7_p85fp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Iara"]
+shape = SubResource("RectangleShape2D_1d664")
+
+[node name="Ribeirinho" type="Area2D" parent="."]
+visible = false
+position = Vector2(1050, 2400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ribeirinho"]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_ylges")
+
+[node name="ColorRect" type="ColorRect" parent="Ribeirinho"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 55.0
+color = Color(0.27451, 0.117647, 0.596078, 1)
+
+[node name="Label" type="Label" parent="Ribeirinho"]
+offset_left = -17.0
+offset_top = 10.0
+offset_right = 19.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 5
+text = "PLACEHOLDER"
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_7u5v8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.219403, 0.219403)
+sprite_frames = SubResource("SpriteFrames_of46r")
+animation = &"Andar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_piwd3")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_ssn31")
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 997.0
+offset_top = 347.0
+offset_right = 1105.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 9
+text = "Você poderia me ajudar?
+Tenho que ..."
+
+[node name="Label2" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 877.0
+offset_top = 344.0
+offset_right = 948.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 9
+text = "Claro, vamos lá!"
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="Control"]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="Iara" to="Iara" method="_on_body_entered"]
+[connection signal="body_exited" from="Iara" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Iara" to="Iara" method="_on_body_exited"]
+[connection signal="body_entered" from="Ribeirinho" to="." method="_on_ribeirinho_body_entered"]
+[connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Control/Timer2" to="." method="_on_timer_2_timeout"]

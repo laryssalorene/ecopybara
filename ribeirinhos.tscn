@@ -1,0 +1,211 @@
+[gd_scene load_steps=27 format=3 uid="uid://mb621eaba0in"]
+
+[ext_resource type="Texture2D" uid="uid://bmdo87ognhet0" path="res://Backgrounds/bckR.jpg" id="1_fy4ps"]
+[ext_resource type="Script" path="res://ribeirinhos.gd" id="1_mg3d3"]
+[ext_resource type="Texture2D" uid="uid://dr8nuhqpvc1fq" path="res://npcs/humans/hf2.png" id="3_7wcu0"]
+[ext_resource type="Texture2D" uid="uid://6b544cpiymvh" path="res://npcs/humans/hf1.png" id="4_7afui"]
+[ext_resource type="Texture2D" uid="uid://c7cysic7h6fv0" path="res://npcs/humans/criRib.png" id="5_rv6eh"]
+[ext_resource type="Texture2D" uid="uid://61vci1d2wkk" path="res://npcs/humans/criaRibf.png" id="6_weemp"]
+[ext_resource type="PackedScene" uid="uid://6yyim8eer220" path="res://helpers/actionable.tscn" id="8_hkv74"]
+[ext_resource type="Script" path="res://player.gd" id="8_opi40"]
+[ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://Sprites/Capivara/capivarinhas.png" id="9_ahvvd"]
+[ext_resource type="Texture2D" uid="uid://dl0vrvaopu0ub" path="res://Sprites/Capivara/aaa2.png" id="10_r3gji"]
+[ext_resource type="Shader" path="res://player.gdshader" id="11_2ktxy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iho4"]
+size = Vector2(1182, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynbm4"]
+size = Vector2(242.5, 14.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwps3"]
+size = Vector2(161, 9.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iasc1"]
+size = Vector2(294, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eod36"]
+size = Vector2(162.438, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0j37"]
+size = Vector2(126, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtu7b"]
+size = Vector2(127.5, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udqfj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rv6eh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_weemp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rv6eh")
+}],
+"loop": true,
+"name": &"falando",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8kqw4"]
+radius = 181.904
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtikh"]
+atlas = ExtResource("9_ahvvd")
+region = Rect2(343, 536, 288, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x6vu"]
+atlas = ExtResource("9_ahvvd")
+region = Rect2(19, 101, 267, 412)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d38gd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtikh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r3gji")
+}],
+"loop": true,
+"name": &"Andar",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x6vu")
+}],
+"loop": true,
+"name": &"Parada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc03e"]
+size = Vector2(50, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asdvn"]
+size = Vector2(136, 64)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mriog"]
+shader = ExtResource("11_2ktxy")
+shader_parameter/light_color = Color(0, 0, 0, 0.784314)
+shader_parameter/radius = 100.0
+shader_parameter/flicker_intensity = 0.04
+shader_parameter/flicker_speed = 0.5
+
+[node name="ribeirinhos" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_mg3d3")
+
+[node name="cenario" type="StaticBody2D" parent="."]
+
+[node name="background" type="Sprite2D" parent="cenario"]
+position = Vector2(588, 316)
+scale = Vector2(0.657924, 0.65625)
+texture = ExtResource("1_fy4ps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario"]
+position = Vector2(595, 629)
+shape = SubResource("RectangleShape2D_6iho4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="cenario"]
+position = Vector2(126, 478)
+shape = SubResource("RectangleShape2D_ynbm4")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="cenario"]
+position = Vector2(352, 503)
+shape = SubResource("RectangleShape2D_lwps3")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="cenario"]
+position = Vector2(345, 370)
+shape = SubResource("RectangleShape2D_iasc1")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="cenario"]
+position = Vector2(872, 430)
+shape = SubResource("RectangleShape2D_eod36")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1066, 471)
+shape = SubResource("RectangleShape2D_i0j37")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1030, 533.5)
+shape = SubResource("RectangleShape2D_jtu7b")
+one_way_collision = true
+
+[node name="Hf2" type="Sprite2D" parent="."]
+position = Vector2(433.688, 343.688)
+scale = Vector2(0.1561, 0.145992)
+texture = ExtResource("3_7wcu0")
+
+[node name="Hf1" type="Sprite2D" parent="."]
+position = Vector2(981.906, 386.906)
+scale = Vector2(0.201854, 0.182729)
+texture = ExtResource("4_7afui")
+
+[node name="crianca" type="AnimatedSprite2D" parent="."]
+position = Vector2(694, 541)
+scale = Vector2(0.432624, 0.417492)
+sprite_frames = SubResource("SpriteFrames_udqfj")
+
+[node name="Actionable" parent="crianca" instance=ExtResource("8_hkv74")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crianca/Actionable"]
+shape = SubResource("CircleShape2D_8kqw4")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(220, 330)
+script = ExtResource("8_opi40")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(0.219403, 0.219403)
+sprite_frames = SubResource("SpriteFrames_d38gd")
+animation = &"Andar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_jc03e")
+
+[node name="Direction" type="Marker2D" parent="Player"]
+light_mask = 16
+position = Vector2(0, -3)
+
+[node name="ActionableFinder" type="Area2D" parent="Player/Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Direction/ActionableFinder"]
+shape = SubResource("RectangleShape2D_asdvn")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+material = SubResource("ShaderMaterial_mriog")
+offset_left = -60.0
+offset_top = 29.0
+offset_right = 72.0
+offset_bottom = 61.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 1161.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

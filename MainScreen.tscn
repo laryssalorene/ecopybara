@@ -1,0 +1,142 @@
+[gd_scene load_steps=11 format=3 uid="uid://bug31rrf7hjtm"]
+
+[ext_resource type="Texture2D" uid="uid://q6hl3lfqo3ea" path="res://Backgrounds/BG.jpg" id="1"]
+[ext_resource type="FontFile" uid="uid://despp4nmxkkse" path="res://Fonte/PressStart2P-Regular.ttf" id="3"]
+[ext_resource type="Script" path="res://MainScreen.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://c05eo0ehgtcax" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow.png" id="4_nyexx"]
+[ext_resource type="Texture2D" uid="uid://goutmx5lftab" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-=.png" id="5_p6032"]
+[ext_resource type="Texture2D" uid="uid://cx6mte58v7nnd" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-x.png" id="6_n0s8q"]
+[ext_resource type="AudioStream" uid="uid://bfhofj3xg5o7k" path="res://musicas/Musica.mp3" id="7_qkk47"]
+
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="MainScreen" type="CanvasLayer"]
+offset = Vector2(640, 360)
+transform = Transform2D(1, 0, 0, 1, 640, 360)
+script = ExtResource("4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-63.9994, -35.0002)
+scale = Vector2(1.09714, 1.2037)
+texture = ExtResource("1")
+
+[node name="Iniciar" type="Button" parent="."]
+offset_left = -193.0
+offset_top = 9.0
+offset_right = 58.0
+offset_bottom = 79.0
+theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
+theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_fonts/font = SubResource("1")
+text = "INICIAR"
+icon = ExtResource("4_nyexx")
+flat = true
+expand_icon = true
+
+[node name="Info" type="Button" parent="."]
+offset_left = -194.0
+offset_top = 84.0
+offset_right = 27.0
+offset_bottom = 154.0
+theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
+theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_fonts/font = SubResource("1")
+text = " INFO"
+icon = ExtResource("5_p6032")
+flat = true
+expand_icon = true
+
+[node name="Sair" type="Button" parent="."]
+offset_left = -194.0
+offset_top = 159.0
+offset_right = 46.0
+offset_bottom = 229.0
+theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
+theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_fonts/font = SubResource("1")
+text = "SAIR"
+icon = ExtResource("6_n0s8q")
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -364.0
+offset_top = -270.0
+offset_right = 236.0
+offset_bottom = -70.0
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("2")
+theme_override_font_sizes/font_size = 24
+text = "ECOPYBARA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Info2" type="Label" parent="."]
+visible = false
+offset_left = 109.0
+offset_top = -69.0
+offset_right = 493.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_fonts/font = SubResource("4")
+text = "Seu objetivo é ajudar a natureza a se defender contra as ações do homem!
+
+
+Acompanhe esta capivara em sua jornada!
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MusicaAmbiente" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(135, 193)
+stream = ExtResource("7_qkk47")
+autoplay = true
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_Iniciar_pressed"]
+[connection signal="pressed" from="Info" to="." method="_on_Info_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

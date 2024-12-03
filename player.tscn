@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://c00rys5v1nyig"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_udvj4"]
+[ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://Sprites/Capivara/capivarinhas.png" id="2_pf3gw"]
+[ext_resource type="Shader" path="res://player.gdshader" id="4_5jedb"]
+[ext_resource type="Texture2D" uid="uid://dsq083nxym801" path="res://Sprites/Capivara/aaa.png" id="4_c30xd"]
+[ext_resource type="AudioStream" uid="uid://clct5b5g57e6a" path="res://musicas/walk.mp3" id="5_viej4"]
+[ext_resource type="AudioStream" uid="uid://cmugvjkpftgx8" path="res://musicas/pulo.mp3" id="6_nsrck"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_caeh0"]
+shader = ExtResource("4_5jedb")
+shader_parameter/light_color = Color(0, 0, 0, 0.784314)
+shader_parameter/radius = 100.0
+shader_parameter/flicker_intensity = 0.04
+shader_parameter/flicker_speed = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtikh"]
+atlas = ExtResource("2_pf3gw")
+region = Rect2(343, 536, 288, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x6vu"]
+atlas = ExtResource("2_pf3gw")
+region = Rect2(19, 101, 267, 412)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_of46r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtikh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c30xd")
+}],
+"loop": true,
+"name": &"Andar",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x6vu")
+}],
+"loop": true,
+"name": &"Parada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piwd3"]
+size = Vector2(50, 84)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_udvj4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_caeh0")
+offset_left = -60.0
+offset_top = 29.0
+offset_right = 72.0
+offset_bottom = 61.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.219, 0.219)
+sprite_frames = SubResource("SpriteFrames_of46r")
+animation = &"Parada"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_piwd3")
+
+[node name="Andar" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_viej4")
+autoplay = true
+
+[node name="Pulo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_nsrck")
+
+[node name="Andar2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_viej4")
+
+[node name="Pulo2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_nsrck")

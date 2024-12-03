@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwrk76xi4y4tr"
+path="res://.godot/imported/pulo no rio.mp3-daa3026049f74f3868ea9d6260bb76ac.mp3str"
+
+[deps]
+
+source_file="res://musicas/pulo no rio.mp3"
+dest_files=["res://.godot/imported/pulo no rio.mp3-daa3026049f74f3868ea9d6260bb76ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

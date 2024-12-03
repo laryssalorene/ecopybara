@@ -1,0 +1,195 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jnynk"]
+
+[resource]
+script = ExtResource("1_jnynk")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Peixe", "Capivara")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"11": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Eu sabia que tava ruim, mas não assim. Tem alguma coisa que eu possa fazer pra ajudar?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu sabia que tava ruim, mas não assim. Tem alguma coisa que eu possa fazer pra ajudar?",
+"type": &"dialogue"
+},
+"13": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Pode. Você pode limpar o rio! Se ele estiver limpo, eu vou conseguir nadar mais longe e te levar até quem você procura.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pode. Você pode limpar o rio! Se ele estiver limpo, eu vou conseguir nadar mais longe e te levar até quem você procura.",
+"type": &"dialogue"
+},
+"15": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Você sabe onde a Iara tá?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Você sabe onde a Iara tá?",
+"type": &"dialogue"
+},
+"17": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Sei sim. Mas, nesse estado, eu nem consigo chegar perto do lugar onde ela vive. A água suja tá me prendendo aqui.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sei sim. Mas, nesse estado, eu nem consigo chegar perto do lugar onde ela vive. A água suja tá me prendendo aqui.",
+"type": &"dialogue"
+},
+"18": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "20",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Limpe o rio e eu vou nadar até lá pra te mostrar o caminho!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Limpe o rio e eu vou nadar até lá pra te mostrar o caminho!",
+"type": &"dialogue"
+},
+"20": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "22",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Pode contar comigo. Eu não vou descansar até tirar todo esse lixo do rio.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pode contar comigo. Eu não vou descansar até tirar todo esse lixo do rio.",
+"type": &"dialogue"
+},
+"22": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "24",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Obrigado... Eu tô contando com você, Capivara. Só assim a gente vai poder salvar o rio e encontrar a Iara.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Obrigado... Eu tô contando com você, Capivara. Só assim a gente vai poder salvar o rio e encontrar a Iara.",
+"type": &"dialogue"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Ugh...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ugh...",
+"type": &"dialogue"
+},
+"4": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Estou me sentindo tão doente há tanto tempo...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Estou me sentindo tão doente há tanto tempo...",
+"type": &"dialogue"
+},
+"5": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Todo mundo que eu conheço no rio está fraco por causa disso. Só eu sobrevivi da minha família...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Todo mundo que eu conheço no rio está fraco por causa disso. Só eu sobrevivi da minha família...",
+"type": &"dialogue"
+},
+"7": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Isso é terrível! O que tá acontecendo com o rio?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Isso é terrível! O que tá acontecendo com o rio?",
+"type": &"dialogue"
+},
+"9": {
+"character": "Peixe",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "O rio tá cheio de lixo e metais pesados. A água não tá mais limpa, tá difícil até respirar aqui embaixo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "O rio tá cheio de lixo e metais pesados. A água não tá mais limpa, tá difícil até respirar aqui embaixo.",
+"type": &"dialogue"
+}
+}
+raw_text = "~ start
+
+Peixe: Ugh...
+Peixe: Estou me sentindo tão doente há tanto tempo...
+Peixe: Todo mundo que eu conheço no rio está fraco por causa disso. Só eu sobrevivi da minha família...
+
+Capivara: Isso é terrível! O que tá acontecendo com o rio?
+
+Peixe: O rio tá cheio de lixo e metais pesados. A água não tá mais limpa, tá difícil até respirar aqui embaixo.
+
+Capivara: Eu sabia que tava ruim, mas não assim. Tem alguma coisa que eu possa fazer pra ajudar?
+
+Peixe: Pode. Você pode limpar o rio! Se ele estiver limpo, eu vou conseguir nadar mais longe e te levar até quem você procura.
+
+Capivara: Você sabe onde a Iara tá?
+
+Peixe: Sei sim. Mas, nesse estado, eu nem consigo chegar perto do lugar onde ela vive. A água suja tá me prendendo aqui.
+Peixe: Limpe o rio e eu vou nadar até lá pra te mostrar o caminho!
+
+Capivara: Pode contar comigo. Eu não vou descansar até tirar todo esse lixo do rio.
+
+Peixe: Obrigado... Eu tô contando com você, Capivara. Só assim a gente vai poder salvar o rio e encontrar a Iara.
+
+=> END"
+metadata/dialogue_manager_version = "2.44.0"

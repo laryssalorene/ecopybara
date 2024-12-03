@@ -1,0 +1,147 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsq0rqjssfqc1"]
+
+[ext_resource type="Script" path="res://DesafioNorte/desafio_rio.gd" id="1_b41w0"]
+[ext_resource type="Texture2D" uid="uid://byqh6ve4guyl5" path="res://Backgrounds/Dirtyriver.png" id="2_acq0p"]
+[ext_resource type="PackedScene" uid="uid://sxeebt8tpf1k" path="res://DesafioNorte/player.tscn" id="2_gf6oa"]
+[ext_resource type="Texture2D" uid="uid://c57x0l2tdgo13" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Heart.png" id="3_pae8v"]
+[ext_resource type="Texture2D" uid="uid://wm0whauuvmcv" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-heart.png" id="4_tw8hi"]
+[ext_resource type="Texture2D" uid="uid://dtvcdglax600j" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Coin.png" id="5_75gkd"]
+[ext_resource type="Texture2D" uid="uid://clvqcbqhsyr7n" path="res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-coin.png" id="6_ocj6m"]
+[ext_resource type="FontFile" uid="uid://despp4nmxkkse" path="res://Fonte/PressStart2P-Regular.ttf" id="7_gier2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_313gh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pae8v")
+}],
+"loop": true,
+"name": &"cheio",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tw8hi")
+}],
+"loop": true,
+"name": &"vazio",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0dqfc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_75gkd")
+}],
+"loop": true,
+"name": &"cheio",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ocj6m")
+}],
+"loop": true,
+"name": &"vazio",
+"speed": 5.0
+}]
+
+[node name="DesafioRio" type="Node2D"]
+script = ExtResource("1_b41w0")
+
+[node name="Dirtyriver" type="Sprite2D" parent="."]
+position = Vector2(576, 337)
+scale = Vector2(0.642857, 0.658203)
+texture = ExtResource("2_acq0p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.501961, 1, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource("2_gf6oa")]
+position = Vector2(100, 560)
+
+[node name="Labelh" type="Label" parent="."]
+offset_left = 21.0
+offset_top = 18.0
+offset_right = 171.0
+offset_bottom = 58.0
+
+[node name="Coracao1" type="AnimatedSprite2D" parent="Labelh"]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_313gh")
+animation = &"cheio"
+
+[node name="Coracao2" type="AnimatedSprite2D" parent="Labelh"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(25, 0)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_313gh")
+animation = &"cheio"
+
+[node name="Coracao3" type="AnimatedSprite2D" parent="Labelh"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(50, 0)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_313gh")
+animation = &"cheio"
+
+[node name="Labelc" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 35.0
+offset_right = 166.0
+offset_bottom = 75.0
+
+[node name="Craft1" type="AnimatedSprite2D" parent="Labelc"]
+modulate = Color(0.764706, 0.72549, 0.215686, 1)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_0dqfc")
+animation = &"vazio"
+
+[node name="Craft2" type="AnimatedSprite2D" parent="Labelc"]
+modulate = Color(0.764706, 0.72549, 0.215686, 1)
+position = Vector2(15, 0)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_0dqfc")
+animation = &"vazio"
+
+[node name="Craft3" type="AnimatedSprite2D" parent="Labelc"]
+modulate = Color(0.764706, 0.72549, 0.215686, 1)
+position = Vector2(30, 0)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_0dqfc")
+animation = &"vazio"
+
+[node name="Craft4" type="AnimatedSprite2D" parent="Labelc"]
+modulate = Color(0.764706, 0.72549, 0.215686, 1)
+position = Vector2(45, 0)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_0dqfc")
+animation = &"vazio"
+
+[node name="Craft5" type="AnimatedSprite2D" parent="Labelc"]
+modulate = Color(0.764706, 0.72549, 0.215686, 1)
+position = Vector2(60, 0)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_0dqfc")
+animation = &"vazio"
+
+[node name="Labelp" type="Label" parent="."]
+offset_left = 1058.0
+offset_top = 20.0
+offset_right = 1098.0
+offset_bottom = 44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_gier2")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
