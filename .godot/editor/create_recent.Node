@@ -1,5 +1,6 @@
-Timer
 ColorRect
+GPUParticles2D
+Timer
 PointLight2D
 CollisionShape2D
 CanvasModulate
@@ -11,4 +12,3 @@ StaticBody2D
 Label
 Control
 Camera2D
-CharacterBody2D

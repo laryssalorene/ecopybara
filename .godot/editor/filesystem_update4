@@ -1,13 +1,6 @@
 res://MainScene.tscn
+res://estátua.gdshader
 res://player.gdshader
 res://MainScene.gdshader
 res://Estatua.gdshader
 res://MainScreen.tscn
-res://player.tscn
-res://ribeirinhos.tscn
-res://ribeirinhosFase.tscn
-res://DesafioNorte/desafio_antes.tscn
-res://DesafioNorte/desafio_rio.tscn
-res://DesafioNorte/lixo.tscn
-res://DesafioNorte/desafio_rio.gd
-res://DesafioNorte/player.tscn

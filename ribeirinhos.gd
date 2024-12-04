@@ -5,6 +5,7 @@ var last_y_position: float = 0.0
 var parou = 0
 var falou = 0
 var mudar = 0
+var pulo = false
 
 func _ready() -> void:
 	player = $Player
@@ -28,6 +29,7 @@ func escurecer():
 		$ColorRect.self_modulate.a += 0.01
 
 func _process(delta: float) -> void:
+	pulinho()
 	iluminar()
 	escurecer()
 	player.set_velocidade(200*(player.position.y/560))
@@ -47,8 +49,20 @@ func _process(delta: float) -> void:
 		if mudar != 2:
 			mudar = 1
 
+func pulinho():
+	if pulo and $Player/AnimatedSprite2D.position.y > -60 and $Player.position.y < 540:
+		$Player/AnimatedSprite2D.position.y -= 4
+	elif !pulo and $Player/AnimatedSprite2D.position.y < 0:
+		$Player/AnimatedSprite2D.position.y += 4
+	if Input.is_action_pressed("ui_down") and get_tree().get_current_scene().name == "ribeirinhos":
+		pulo = true
+		$TimerPuloCima.start()
+
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://ribeirinhosFase.tscn")
 
 func _on_timer_2_timeout() -> void:
 	get_tree().change_scene_to_file("res://DesafioNorte/desafio_antes.tscn")
+
+func _on_timer_pulo_cima_timeout() -> void:
+	pulo = false

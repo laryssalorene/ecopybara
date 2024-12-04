@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b13s51ynbflf1"]
+[gd_scene load_steps=15 format=3 uid="uid://b13s51ynbflf1"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_r37f6"]
+[ext_resource type="Shader" path="res://estátua.gdshader" id="3_1ufci"]
 [ext_resource type="Texture2D" uid="uid://cafs0ndws1ig1" path="res://Backgrounds/cave.png" id="3_buu3j"]
 [ext_resource type="PackedScene" uid="uid://c00rys5v1nyig" path="res://player.tscn" id="5_hskfk"]
 [ext_resource type="Texture2D" uid="uid://ddq0nfpwpdtm0" path="res://Sprites/Estatuas/iara.png" id="5_ruloy"]
@@ -12,6 +13,13 @@ size = Vector2(1159.5, 77)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnccl"]
 size = Vector2(336.25, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4blva"]
+shader = ExtResource("3_1ufci")
+shader_parameter/light_color = Color(1, 1, 1, 0)
+shader_parameter/radius = 100.0
+shader_parameter/flicker_intensity = 0.04
+shader_parameter/flicker_speed = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1d664"]
 size = Vector2(120, 156)
@@ -77,6 +85,13 @@ offset = Vector2(576, 324)
 [node name="Iara" type="Area2D" parent="."]
 position = Vector2(600, 472)
 
+[node name="LuzChao" type="ColorRect" parent="Iara"]
+material = SubResource("ShaderMaterial_4blva")
+offset_left = -153.0
+offset_top = 77.0
+offset_right = 143.0
+offset_bottom = 109.0
+
 [node name="Iara2" type="Sprite2D" parent="Iara"]
 scale = Vector2(0.225705, 0.21419)
 texture = ExtResource("5_ruloy")
@@ -90,7 +105,7 @@ shape = SubResource("RectangleShape2D_1d664")
 wait_time = 3.0
 one_shot = true
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="LuzTochaD" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_5f6cq")
 anchors_preset = 8
 anchor_left = 0.5
@@ -106,7 +121,7 @@ grow_vertical = 2
 pivot_offset = Vector2(160, 160)
 color = Color(0.999999, 0.986056, 0.602642, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="."]
+[node name="LuzTochaE" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_5f6cq")
 anchors_preset = 8
 anchor_left = 0.5
@@ -122,7 +137,7 @@ grow_vertical = 2
 pivot_offset = Vector2(160, 160)
 color = Color(0.999999, 0.986056, 0.602642, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="LuzEstatua" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_84yn8")
 anchors_preset = 8
 anchor_left = 0.5
@@ -130,7 +145,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 457.0
-offset_top = 134.0
+offset_top = 75.0
 offset_right = 725.0
 offset_bottom = 540.0
 grow_horizontal = 2
