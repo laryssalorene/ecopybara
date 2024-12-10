@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://j74d35m7nahf"
+path="res://.godot/imported/mineradores.dialogue-392849fa0346580b75f4e403ac7dffdf.tres"
+
+[deps]
+
+source_file="res://dialogue/mineradores.dialogue"
+dest_files=["res://.godot/imported/mineradores.dialogue-392849fa0346580b75f4e403ac7dffdf.tres"]
+
+[params]
+
+defaults=true

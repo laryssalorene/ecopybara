@@ -92,12 +92,6 @@ position = Vector2(576, 337)
 scale = Vector2(0.643, 0.658)
 texture = ExtResource("3_pw0c3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0.501961, 1, 1)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true

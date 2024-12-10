@@ -5,3 +5,11 @@ var estatua: String = "nao"
 var som: String = "nao"
 
 var pronto: String = "nao"
+
+var foram: String = "nao"
+
+var cipo: String = "nao"
+
+var chave: String = "nao"
+
+var solto: bool = false

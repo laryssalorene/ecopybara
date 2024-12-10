@@ -15,7 +15,8 @@ extends CharacterBody2D
 var movimento = Vector2()  # Vetor que armazena o movimento atual
 
 func _ready():
-	$AnimatedSprite2D.scale.x = -abs($AnimatedSprite2D.scale.x)
+	if get_tree().get_current_scene().name != "Mineradores":
+		$AnimatedSprite2D.scale.x = -abs($AnimatedSprite2D.scale.x)
 	$ColorRect.position.x = -65
 
 func _process(delta):

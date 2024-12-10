@@ -1,4 +1,4 @@
-res://DesafioNorte/desafio_rio.tscn
+res://DesafioNorte/desafio_antes.tscn
 res://estátua.gdshader
 res://player.gdshader
 res://MainScene.gdshader
@@ -9,14 +9,21 @@ res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres
 res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres
 res://MainScreen.tscn
 res://MainScene.tscn
+res://DesafioNorte/desafio_rio.tscn
 res://player.tscn
-res://DesafioNorte/desafio_antes.tscn
 res://ribeirinhos.tscn
 res://info.tscn
 res://ribeirinhosFase.tscn
-res://DesafioNorte/player.tscn
 res://DesafioNorte/lixo.tscn
-res://DesafioNorte/desafio_rio.gd
-res://DesafioNorte/lixo.gd
 res://MusicManager.tscn
-res://DesafioNorte/player.gd
+res://DesafioNorte/player.tscn
+res://mineradores.gd
+res://mineradores.tscn
+res://npcs/humans/miner2.tres
+res://npcs/iara/solta.tres
+res://state.gd
+res://npcs/iara/presa.tres
+res://npcs/humans/miner.tres
+res://player.gd
+res://mineradores.gdshader
+res://info.gd

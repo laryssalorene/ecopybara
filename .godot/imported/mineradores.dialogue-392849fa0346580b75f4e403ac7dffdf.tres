@@ -1,0 +1,458 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_vr6m4"]
+
+[resource]
+script = ExtResource("1_vr6m4")
+using_states = PackedStringArray()
+titles = {
+"chave": "22",
+"cipo": "16",
+"iara": "28",
+"momento": "12",
+"start": "2"
+}
+character_names = PackedStringArray("Minerador 1", "Minerador 2", "Minerador 3", "Capivara", "Iara")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": &"title"
+},
+"11": {
+"id": "11",
+"next_id": "12",
+"text": "momento",
+"type": &"title"
+},
+"12": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "É a Iara, Tenho que tentar resgatar ela!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "É a Iara, Tenho que tentar resgatar ela!",
+"type": &"dialogue"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"15": {
+"id": "15",
+"next_id": "16",
+"text": "cipo",
+"type": &"title"
+},
+"16": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Acho que daqui já é alto o suficiente, irei me agarrar a um cipó para conseguir saltar próximo daquele telhado.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Acho que daqui já é alto o suficiente, irei me agarrar a um cipó para conseguir saltar próximo daquele telhado.",
+"type": &"dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"next_id_after": "19",
+"notes": "",
+"responses": PackedStringArray("17"),
+"tags": PackedStringArray(),
+"text": "Atravessar com cipó!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Atravessar com cipó!",
+"type": &"response"
+},
+"18": {
+"id": "18",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cipo"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "sim"
+}]),
+"is_blocking": true
+},
+"next_id": "19",
+"parent_id": "17",
+"type": &"mutation"
+},
+"19": {
+"id": "19",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"2": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "... Vozes à distância",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "... Vozes à distância",
+"type": &"dialogue"
+},
+"21": {
+"id": "21",
+"next_id": "22",
+"text": "chave",
+"type": &"title"
+},
+"22": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Finalmente achei a chave!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Finalmente achei a chave!",
+"type": &"dialogue"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "chave"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "sim"
+}]),
+"is_blocking": true
+},
+"next_id": "24",
+"type": &"mutation"
+},
+"24": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
+"next_id_after": "25",
+"notes": "",
+"responses": PackedStringArray("24"),
+"tags": PackedStringArray(),
+"text": "Retornar a Iara.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Retornar a Iara.",
+"type": &"response"
+},
+"25": {
+"id": "25",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"27": {
+"id": "27",
+"next_id": "28",
+"text": "iara",
+"type": &"title"
+},
+"28": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "chave"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "nao"
+}, {
+"type": "colon"
+}])
+},
+"id": "28",
+"next_conditional_id": "33",
+"next_id": "29",
+"next_id_after": "end!",
+"type": &"condition"
+},
+"29": {
+"character": "Iara",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"notes": "",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Capivarinhaaa! Você veio!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Capivarinhaaa! Você veio!",
+"type": &"dialogue"
+},
+"3": {
+"character": "Minerador 1",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Cara, não sei mais onde despejar, os barris já estão todos cheios.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Cara, não sei mais onde despejar, os barris já estão todos cheios.",
+"type": &"dialogue"
+},
+"30": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"notes": "",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Agora não é o momento para comemorações, como posso lhe soltar?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Agora não é o momento para comemorações, como posso lhe soltar?",
+"type": &"dialogue"
+},
+"31": {
+"character": "Iara",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
+"next_id": "32",
+"notes": "",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Eles guardam uma chave do outro lado do rio, mas ela está no telhado, você consegue chegar lá?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eles guardam uma chave do outro lado do rio, mas ela está no telhado, você consegue chegar lá?",
+"type": &"dialogue"
+},
+"32": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "end!",
+"notes": "",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "Eu dou um jeito!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu dou um jeito!",
+"type": &"dialogue"
+},
+"33": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "chave"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "string",
+"value": "sim"
+}, {
+"type": "colon"
+}])
+},
+"id": "33",
+"next_conditional_id": "end!",
+"next_id": "34",
+"next_id_after": "end!",
+"type": &"condition"
+},
+"34": {
+"character": "Capivara",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"notes": "",
+"parent_id": "33",
+"tags": PackedStringArray(),
+"text": "Consegui! Vou lhe soltar!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Consegui! Vou lhe soltar!",
+"type": &"dialogue"
+},
+"35": {
+"id": "35",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "solto"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "end!",
+"parent_id": "33",
+"type": &"mutation"
+},
+"4": {
+"character": "Minerador 2",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Despeja no rio, agora que a gente tem a Iara, o rio é nosso!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Despeja no rio, agora que a gente tem a Iara, o rio é nosso!",
+"type": &"dialogue"
+},
+"5": {
+"character": "Minerador 1",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Er... Tá bom então, vou esperar outra remessa e despejar tudo lá.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Er... Tá bom então, vou esperar outra remessa e despejar tudo lá.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Minerador 3",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Deixem de se preocupar com isso, o almoço tá chegando e vocês ai discutindo!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Deixem de se preocupar com isso, o almoço tá chegando e vocês ai discutindo!",
+"type": &"dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"next_id_after": "9",
+"notes": "",
+"responses": PackedStringArray("7"),
+"tags": PackedStringArray(),
+"text": "Esperar?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Esperar?",
+"type": &"response"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "foram"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "sim"
+}]),
+"is_blocking": true
+},
+"next_id": "9",
+"parent_id": "7",
+"type": &"mutation"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ start
+... Vozes à distância
+Minerador 1: Cara, não sei mais onde despejar, os barris já estão todos cheios.
+Minerador 2: Despeja no rio, agora que a gente tem a Iara, o rio é nosso!
+Minerador 1: Er... Tá bom então, vou esperar outra remessa e despejar tudo lá.
+Minerador 3: Deixem de se preocupar com isso, o almoço tá chegando e vocês ai discutindo!
+- Esperar?
+	set State.foram = \"sim\"
+=> END
+
+~ momento
+Capivara: É a Iara, Tenho que tentar resgatar ela!
+=> END
+
+~ cipo
+Acho que daqui já é alto o suficiente, irei me agarrar a um cipó para conseguir saltar próximo daquele telhado.
+- Atravessar com cipó!
+	set State.cipo = \"sim\"
+=> END
+
+~ chave
+Finalmente achei a chave!
+set State.chave = \"sim\"
+- Retornar a Iara.
+=> END
+
+~ iara
+if State.chave == \"nao\":
+	Iara: Capivarinhaaa! Você veio!
+	Capivara: Agora não é o momento para comemorações, como posso lhe soltar?
+	Iara: Eles guardam uma chave do outro lado do rio, mas ela está no telhado, você consegue chegar lá?
+	Capivara: Eu dou um jeito!
+elif State.chave == \"sim\":
+	Capivara: Consegui! Vou lhe soltar!
+	set State.solto = true"
+metadata/dialogue_manager_version = "2.44.0"

@@ -14,6 +14,8 @@ func escolha():
 		$Control/Texto.text = "Você foi invocada, escolhida para representar a natureza. Sua aventura começa aqui. Interaja com a estátua para encontrar o seu destino."
 	elif get_tree().get_current_scene().name == "ribeirinhos":
 		$Control/Texto.text = "Seu primeiro destino: quem sabe algum desses ribeirinhos possa ajudá-la?"
+	elif get_tree().get_current_scene().name == "Mineradores":
+		$Control/Texto.text = "Você tem que libertar a Iara, talvez a árvore seja alta o suficiente para pular para o outro lado?"
 	elif get_tree().get_current_scene().name == "ribeirinhos1":
 		$Control/Texto.text = "Vá em direção ao rio, para o NORTE! É lá que você encontrará o seu primeiro desafio!"
 	elif get_tree().get_current_scene().name == "DesafioRio":

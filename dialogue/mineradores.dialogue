@@ -1,0 +1,35 @@
+~ start
+... Vozes à distância
+Minerador 1: Cara, não sei mais onde despejar, os barris já estão todos cheios.
+Minerador 2: Despeja no rio, agora que a gente tem a Iara, o rio é nosso!
+Minerador 1: Er... Tá bom então, vou esperar outra remessa e despejar tudo lá.
+Minerador 3: Deixem de se preocupar com isso, o almoço tá chegando e vocês ai discutindo!
+- Esperar?
+	set State.foram = "sim"
+=> END
+
+~ momento
+Capivara: É a Iara, Tenho que tentar resgatar ela!
+=> END
+
+~ cipo
+Acho que daqui já é alto o suficiente, irei me agarrar a um cipó para conseguir saltar próximo daquele telhado.
+- Atravessar com cipó!
+	set State.cipo = "sim"
+=> END
+
+~ chave
+Finalmente achei a chave!
+set State.chave = "sim"
+- Retornar a Iara.
+=> END
+
+~ iara
+if State.chave == "nao":
+	Iara: Capivarinhaaa! Você veio!
+	Capivara: Agora não é o momento para comemorações, como posso lhe soltar?
+	Iara: Eles guardam uma chave do outro lado do rio, mas ela está no telhado, você consegue chegar lá?
+	Capivara: Eu dou um jeito!
+elif State.chave == "sim":
+	Capivara: Consegui! Vou lhe soltar!
+	set State.solto = true

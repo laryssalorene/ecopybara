@@ -1,15 +1,19 @@
-[gd_scene load_steps=17 format=3 uid="uid://df2xfx086adox"]
+[gd_scene load_steps=24 format=3 uid="uid://b4d0kfkg7fhim"]
 
-[ext_resource type="Texture2D" uid="uid://cdkuw3tn18q3w" path="res://Backgrounds/BACKMIN.png" id="1_pyxfa"]
-[ext_resource type="Texture2D" uid="uid://bf5kogunr8v2q" path="res://npcs/humans/miner1.png" id="2_qc2jr"]
-[ext_resource type="Texture2D" uid="uid://61vci1d2wkk" path="res://npcs/humans/criaRibf.png" id="3_7kpq4"]
-[ext_resource type="Texture2D" uid="uid://c7cysic7h6fv0" path="res://npcs/humans/criRib.png" id="4_ixwer"]
+[ext_resource type="Script" path="res://mineradores.gd" id="1_syy8r"]
+[ext_resource type="Texture2D" uid="uid://bsbl5ctdyisv5" path="res://Backgrounds/bckM.png" id="2_4sfsp"]
+[ext_resource type="Texture2D" uid="uid://d15u1phn3yjxy" path="res://npcs/humans/miner.tres" id="3_b22ev"]
+[ext_resource type="Texture2D" uid="uid://bdm0x2tjv3ghp" path="res://npcs/humans/miner2.tres" id="5_6d61y"]
 [ext_resource type="Texture2D" uid="uid://brqpjt78gmglo" path="res://npcs/humans/miner3.png" id="5_bpve4"]
-[ext_resource type="Texture2D" uid="uid://dbrv4iimkqxhr" path="res://npcs/humans/miner2.png" id="6_h44mb"]
-[ext_resource type="Texture2D" uid="uid://bas86bnyohfuh" path="res://npcs/iara/iara.png" id="7_iefgh"]
+[ext_resource type="Texture2D" uid="uid://cnmopwjuatqwa" path="res://npcs/iara/presa.tres" id="6_k6lr6"]
+[ext_resource type="Texture2D" uid="uid://pw75wrqpcf2c" path="res://npcs/iara/solta.tres" id="7_0q887"]
+[ext_resource type="Texture2D" uid="uid://ctkjy5i4i3c4d" path="res://Sprites/tonel.png" id="7_ukab0"]
+[ext_resource type="PackedScene" uid="uid://c00rys5v1nyig" path="res://player.tscn" id="8_jaq0v"]
+[ext_resource type="Shader" path="res://mineradores.gdshader" id="10_1p6dw"]
+[ext_resource type="PackedScene" uid="uid://bqbvss7eihtn2" path="res://info.tscn" id="11_ei415"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xtjq"]
-size = Vector2(1182, 52)
+size = Vector2(1191, 52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcvx1"]
 size = Vector2(318.25, 7.25)
@@ -17,73 +21,79 @@ size = Vector2(318.25, 7.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_110ky"]
 size = Vector2(411, 2)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0yqqu"]
-atlas = ExtResource("2_qc2jr")
-region = Rect2(0, 0, 500, 750)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p3nu"]
+size = Vector2(86, 14)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8p7wn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0yqqu")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_7kpq4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ixwer")
-}],
-"loop": true,
-"name": &"falando",
-"speed": 5.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7q6o"]
+size = Vector2(146, 6)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5pv6u"]
-atlas = ExtResource("6_h44mb")
-region = Rect2(0, 0, 500, 750)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ywaby"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5pv6u")
-}],
-"loop": true,
-"name": &"default",
-"speed": 2.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8k8t6"]
-atlas = ExtResource("7_iefgh")
-region = Rect2(0, 0, 500, 750)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wih5x"]
+size = Vector2(76, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jwk67"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8k8t6")
+"texture": ExtResource("6_k6lr6")
 }],
 "loop": true,
-"name": &"default",
+"name": &"presa",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0q887")
+}],
+"loop": true,
+"name": &"solta",
+"speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cu2p8"]
+size = Vector2(138, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_onl01"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0q887")
+}],
+"loop": true,
+"name": &"Parada",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j3bi"]
+size = Vector2(136, 64)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_84mht"]
+shader = ExtResource("10_1p6dw")
+shader_parameter/spread = 0.1
+shader_parameter/cutoff = 0.1
+shader_parameter/size = 1.0
+shader_parameter/speed = 2.0
+shader_parameter/ray1_density = 0.4
+shader_parameter/ray2_density = 0.7
+shader_parameter/ray2_intensity = 0.2
+shader_parameter/core_intensity = 1.0
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
+shader_parameter/custom_color = Color(1, 0.8, 0.184314, 0.65098)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hohin"]
+
 [node name="Mineradores" type="Node2D"]
+script = ExtResource("1_syy8r")
 
 [node name="cenario" type="StaticBody2D" parent="."]
 
 [node name="background" type="Sprite2D" parent="cenario"]
 position = Vector2(588, 316)
 scale = Vector2(0.657924, 0.65625)
-texture = ExtResource("1_pyxfa")
+texture = ExtResource("2_4sfsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cenario"]
-position = Vector2(595, 629)
+position = Vector2(590.5, 629)
 shape = SubResource("RectangleShape2D_0xtjq")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="cenario"]
@@ -96,22 +106,201 @@ position = Vector2(215.5, 315)
 shape = SubResource("RectangleShape2D_110ky")
 one_way_collision = true
 
-[node name="miner1" type="AnimatedSprite2D" parent="."]
-position = Vector2(532, 526)
-scale = Vector2(0.432624, 0.417492)
-sprite_frames = SubResource("SpriteFrames_8p7wn")
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="cenario"]
+position = Vector2(415, 508)
+shape = SubResource("RectangleShape2D_7p3nu")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="cenario"]
+position = Vector2(135, 350)
+shape = SubResource("RectangleShape2D_s7q6o")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="cenario"]
+position = Vector2(135, 440)
+shape = SubResource("RectangleShape2D_s7q6o")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="cenario"]
+position = Vector2(341, 468)
+shape = SubResource("RectangleShape2D_7p3nu")
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="cenario"]
+position = Vector2(296, 260)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="cenario"]
+position = Vector2(302, 234)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="cenario"]
+position = Vector2(322, 194)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="cenario"]
+position = Vector2(330, 180)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="cenario"]
+position = Vector2(282, 288)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="cenario"]
+position = Vector2(289, 274)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="cenario"]
+position = Vector2(300, 248)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="cenario"]
+position = Vector2(307, 221)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="cenario"]
+position = Vector2(317, 209)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1016, 293)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1026, 282)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="cenario"]
+position = Vector2(1034, 275)
+shape = SubResource("RectangleShape2D_wih5x")
+one_way_collision = true
+
+[node name="miner1" type="Sprite2D" parent="."]
+position = Vector2(513, 501)
+scale = Vector2(0.36303, 0.350332)
+texture = ExtResource("3_b22ev")
 
 [node name="miner3" type="Sprite2D" parent="."]
-position = Vector2(417, 466)
+position = Vector2(430, 463)
 scale = Vector2(0.194336, 0.173828)
 texture = ExtResource("5_bpve4")
 
-[node name="miner2" type="AnimatedSprite2D" parent="."]
-position = Vector2(351, 490)
+[node name="miner2" type="Sprite2D" parent="."]
+position = Vector2(356, 482)
 scale = Vector2(0.4205, 0.389)
-sprite_frames = SubResource("SpriteFrames_ywaby")
+texture = ExtResource("5_6d61y")
 
-[node name="iara" type="AnimatedSprite2D" parent="."]
-position = Vector2(81, 407)
-scale = Vector2(0.54375, 0.469333)
+[node name="miner5" type="Sprite2D" parent="."]
+position = Vector2(123, 470)
+scale = Vector2(-0.194, 0.174)
+texture = ExtResource("5_bpve4")
+
+[node name="miner4" type="Sprite2D" parent="."]
+position = Vector2(166, 421)
+scale = Vector2(-0.363, 0.35)
+texture = ExtResource("3_b22ev")
+
+[node name="miner6" type="Sprite2D" parent="."]
+position = Vector2(242, 473)
+scale = Vector2(0.4205, 0.389)
+texture = ExtResource("5_6d61y")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(137, 390)
+
+[node name="iara" type="AnimatedSprite2D" parent="Area2D2"]
+position = Vector2(1.52588e-05, 3.05176e-05)
+scale = Vector2(0.629787, 0.524345)
 sprite_frames = SubResource("SpriteFrames_jwk67")
+animation = &"presa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("RectangleShape2D_cu2p8")
+
+[node name="Tonel" type="Sprite2D" parent="."]
+position = Vector2(417, 555)
+texture = ExtResource("7_ukab0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(816, 479)
+rotation = 3.14159
+scale = Vector2(0.487252, -0.487252)
+sprite_frames = SubResource("SpriteFrames_onl01")
+animation = &"Parada"
+
+[node name="Player" parent="." instance=ExtResource("8_jaq0v")]
+position = Vector2(1090, 510)
+
+[node name="Direction" type="Marker2D" parent="Player"]
+light_mask = 16
+position = Vector2(0, -3)
+
+[node name="ActionableFinder" type="Area2D" parent="Player/Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Direction/ActionableFinder"]
+shape = SubResource("RectangleShape2D_3j3bi")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1030, 266)
+
+[node name="ColorRect2" type="ColorRect" parent="Area2D"]
+material = SubResource("ShaderMaterial_84mht")
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = 14.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hohin")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 1159.0
+offset_bottom = 654.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(313, 473)
+enabled = false
+zoom = Vector2(2, 2)
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="Info" parent="." instance=ExtResource("11_ei415")]
+position = Vector2(718, 6)
+
+[node name="Timer4" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]
