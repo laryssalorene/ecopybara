@@ -1,0 +1,21 @@
+~ start
+if State.estatua == "nao":
+	Capivara: ...
+	Estátua da Iara: Jovem capivara, nos ajude, pois não tenho muito tempo. O Norte está em perigo!
+	Capivara: ... ...
+	Estátua da Iara: Com a pouca energia que me resta, vou lhe conceder o poder da fala. Assim, você será capaz de se comunicar com humanos.
+	Estátua da Iara: Tenha cuidado, pois, a partir de agora, não poderei mais ajudá-lo.
+	- Embarcar na aventura?
+		Capivara: Pode contar comigo, vou dar um jeito nessa bagunça!
+		set Global.apertou = 1
+	- Esperar um pouco?
+		Capivara: Só preciso me preparar direito que estarei pronto!
+		set State.estatua = "sim"
+else:
+	Capivara: Agora eu me decidi!
+	- Embarcar na aventura?
+		Capivara: Pode contar comigo, vou dar um jeito nessa bagunça!
+		set Global.apertou = 1
+	- Esperar mais um pouco?
+		Capivara: Pensando melhor... Só mais um momento!
+=> END

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://clvvyx8k5ts0j"]
+
+[ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://Sprites/Capivara/capivarinhas.png" id="1_dxfo8"]
+
+[resource]
+atlas = ExtResource("1_dxfo8")
+region = Rect2(351, 558, 273, 346)

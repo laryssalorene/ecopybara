@@ -1,2 +1,3 @@
 AtlasTexture
+DialogueResource
 SpriteFrames

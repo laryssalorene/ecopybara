@@ -9,3 +9,5 @@ func action() -> void:
 		DialogueManager.show_dialogue_balloon(load("res://dialogue/peixe.dialogue"), dialogue_start)
 	elif str(x) == "ribeirinhos":
 		DialogueManager.show_dialogue_balloon(load("res://dialogue/crianca.dialogue"), dialogue_start)
+	elif str(x) == "MainScene":
+		DialogueManager.show_dialogue_balloon(load("res://dialogue/estatua.dialogue"), dialogue_start)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://mb621eaba0in"]
+[gd_scene load_steps=38 format=3 uid="uid://mb621eaba0in"]
 
 [ext_resource type="Texture2D" uid="uid://bmdo87ognhet0" path="res://Backgrounds/bckR.jpg" id="1_fy4ps"]
 [ext_resource type="Script" path="res://ribeirinhos.gd" id="1_mg3d3"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://2qgwcnd02cih" path="res://Sprites/Capivara/idle2.tres" id="15_5bj1t"]
 [ext_resource type="Texture2D" uid="uid://dvcohvbts5ygi" path="res://Sprites/Capivara/idle3.tres" id="16_8u2eq"]
 [ext_resource type="Texture2D" uid="uid://casc1scyu5ocf" path="res://Sprites/Capivara/idle4.tres" id="17_urv7k"]
+[ext_resource type="Texture2D" uid="uid://clvvyx8k5ts0j" path="res://Sprites/Capivara/pulo.tres" id="18_vgh8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iho4"]
 size = Vector2(1182, 52)
@@ -118,6 +119,14 @@ animations = [{
 "loop": true,
 "name": &"Parada",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_vgh8n")
+}],
+"loop": true,
+"name": &"Pulo",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc03e"]
@@ -211,7 +220,7 @@ script = ExtResource("8_opi40")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(0.219403, 0.219403)
 sprite_frames = SubResource("SpriteFrames_d38gd")
-animation = &"Parada"
+animation = &"Pulo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_jc03e")
@@ -258,7 +267,6 @@ stream = ExtResource("13_deu4t")
 parameters/looping = true
 
 [node name="Info" parent="." instance=ExtResource("14_g5437")]
-visible = false
 position = Vector2(718, 6)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

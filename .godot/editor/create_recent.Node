@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+CollisionShape2D
 Sprite2D
 AnimatedSprite2D
 Label
@@ -7,7 +9,6 @@ Button
 GPUParticles2D
 Timer
 PointLight2D
-CollisionShape2D
 CanvasModulate
 Area2D
 StaticBody2D

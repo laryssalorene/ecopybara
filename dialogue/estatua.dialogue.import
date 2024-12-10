@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cbyox8epycigv"
+path="res://.godot/imported/estatua.dialogue-36e8ccb2045c6e56e4cc759b3ecb6513.tres"
+
+[deps]
+
+source_file="res://dialogue/estatua.dialogue"
+dest_files=["res://.godot/imported/estatua.dialogue-36e8ccb2045c6e56e4cc759b3ecb6513.tres"]
+
+[params]
+
+defaults=true

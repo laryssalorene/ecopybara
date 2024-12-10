@@ -18,11 +18,9 @@ func iluminar():
 		$ColorRect.self_modulate.a -= 0.005
 	else:
 		parou = 1
-		$Info.show()
 
 func escurecer():
 	if falou == 1:
-		$Info.hide()
 		$ColorRect.self_modulate.a += 0.01
 
 func _iniciar_player():
@@ -31,31 +29,12 @@ func _iniciar_player():
 		player.position = Vector2(100, 580)
 
 func _process(delta):
-	if Global.interagir == 1 and Global.apertou == 1:
+	iluminar()
+	escurecer()
+	if Global.apertou == 1:
 		falou = 1
 		$Timer.start()
 		Global.apertou = 0
-	iluminar()
-	escurecer()
-	#fogo()
-
-func _on_area_2d_body_exited(body: CharacterBody2D) -> void:
-	Global.interagir = 0
-
-func _on_iara_body_entered(body: Node2D) -> void:
-	Global.interagir = 1
 
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://ribeirinhos.tscn")
-
-func fogo():
-	if fogoL == 1 and $ColorRect2.self_modulate.a <= 0.08:
-		$ColorRect2.self_modulate.a += 0.0015
-		$ColorRect3.self_modulate.a += 0.0015
-	elif fogoL == 1 and $ColorRect2.self_modulate.a > 0.08:
-		fogoL = 0
-	elif fogoL == 0 and $ColorRect2.self_modulate.a >= 0.010:
-		$ColorRect2.self_modulate.a -= 0.0015
-		$ColorRect3.self_modulate.a -= 0.0015
-	elif fogoL == 0 and $ColorRect2.self_modulate.a < 0.010:
-		fogoL = 1

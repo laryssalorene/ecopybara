@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b13s51ynbflf1"]
+[gd_scene load_steps=21 format=3 uid="uid://b13s51ynbflf1"]
 
 [ext_resource type="Script" path="res://main_scene.gd" id="1_r37f6"]
 [ext_resource type="Shader" path="res://estátua.gdshader" id="3_1ufci"]
@@ -9,6 +9,7 @@
 [ext_resource type="Shader" path="res://MainScene.gdshader" id="5_tflkk"]
 [ext_resource type="Shader" path="res://Estatua.gdshader" id="6_fy3b7"]
 [ext_resource type="Texture2D" uid="uid://fwxcu7rmnnjb" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta2.tres" id="6_n8utq"]
+[ext_resource type="PackedScene" uid="uid://6yyim8eer220" path="res://helpers/actionable.tscn" id="7_ay1lq"]
 [ext_resource type="PackedScene" uid="uid://bqbvss7eihtn2" path="res://info.tscn" id="8_4hleu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uq5bt"]
@@ -17,15 +18,15 @@ size = Vector2(1159.5, 77)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnccl"]
 size = Vector2(336.25, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d664"]
+size = Vector2(120, 156)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4blva"]
 shader = ExtResource("3_1ufci")
 shader_parameter/light_color = Color(1, 1, 1, 0)
 shader_parameter/radius = 100.0
 shader_parameter/flicker_intensity = 0.04
 shader_parameter/flicker_speed = 0.5
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d664"]
-size = Vector2(120, 156)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t730e"]
 animations = [{
@@ -40,6 +41,9 @@ animations = [{
 "name": &"default",
 "speed": 2.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0gsf"]
+size = Vector2(136, 64)
 
 [sub_resource type="GDScript" id="GDScript_jr3if"]
 
@@ -102,6 +106,9 @@ offset = Vector2(576, 324)
 [node name="Iara" type="Area2D" parent="."]
 position = Vector2(600, 472)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Iara"]
+shape = SubResource("RectangleShape2D_1d664")
+
 [node name="LuzChao" type="ColorRect" parent="Iara"]
 material = SubResource("ShaderMaterial_4blva")
 offset_left = -153.0
@@ -113,16 +120,29 @@ offset_bottom = 109.0
 scale = Vector2(0.225705, 0.21419)
 texture = ExtResource("5_ruloy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Iara"]
-shape = SubResource("RectangleShape2D_1d664")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Iara"]
 position = Vector2(-24, -137)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_t730e")
 frame_progress = 0.694188
 
+[node name="Actionable" parent="Iara" instance=ExtResource("7_ay1lq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Iara/Actionable"]
+shape = SubResource("RectangleShape2D_1d664")
+
 [node name="Player" parent="." instance=ExtResource("5_hskfk")]
+
+[node name="Direction" type="Marker2D" parent="Player"]
+light_mask = 16
+position = Vector2(0, -3)
+
+[node name="ActionableFinder" type="Area2D" parent="Player/Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Direction/ActionableFinder"]
+shape = SubResource("RectangleShape2D_w0gsf")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
@@ -184,7 +204,6 @@ offset_bottom = 654.0
 color = Color(0, 0, 0, 1)
 
 [node name="Info" parent="." instance=ExtResource("8_4hleu")]
-visible = false
 position = Vector2(718, 6)
 
 [connection signal="body_entered" from="Iara" to="." method="_on_iara_body_entered"]

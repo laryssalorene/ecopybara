@@ -13,7 +13,6 @@ func _ready() -> void:
 		$crianca/AnimatedSprite2D.play("default")
 	player = $Player
 	$ColorRect.show()
-	$Info.hide()
 	
 	if player == null:
 		print("O Player não foi encontrado!")
@@ -26,12 +25,10 @@ func iluminar():
 	if $ColorRect.self_modulate.a >= 0 and parou == 0:
 		$ColorRect.self_modulate.a -= 0.005
 	else:
-		$Info.show()
 		parou = 1
 
 func escurecer():
 	if falou == 1:
-		$Info.hide()
 		$ColorRect.self_modulate.a += 0.01
 		if get_tree().get_current_scene().name == "ribeirinhos":
 			$crianca/AnimatedSprite2D.hide()

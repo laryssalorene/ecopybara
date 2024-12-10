@@ -36,5 +36,4 @@ func iluminar():
 	if $ColorRect.self_modulate.a >= 0 and parou == 0:
 		$ColorRect.self_modulate.a -= 0.005
 	else:
-		$Info.show()
 		parou = 1
