@@ -27,3 +27,12 @@ res://npcs/humans/miner.tres
 res://player.gd
 res://mineradores.gdshader
 res://info.gd
+res://npcs/humans/dormiu.tres
+res://npcs/humans/dormiu2.tres
+res://npcs/humans/dormiu3.tres
+res://animated_sprite_2d.gd
+res://Sprites/Capivara/pulo2.tres
+res://DesafioNorte/desafio_rio.gd
+res://global.gd
+res://DesafioNorte/player.gd
+res://Sprites/Capivara/idle4.tres

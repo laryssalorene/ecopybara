@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b4d0kfkg7fhim"]
+[gd_scene load_steps=42 format=3 uid="uid://b4d0kfkg7fhim"]
 
 [ext_resource type="Script" path="res://mineradores.gd" id="1_syy8r"]
 [ext_resource type="Texture2D" uid="uid://bsbl5ctdyisv5" path="res://Backgrounds/bckM.png" id="2_4sfsp"]
@@ -9,8 +9,24 @@
 [ext_resource type="Texture2D" uid="uid://pw75wrqpcf2c" path="res://npcs/iara/solta.tres" id="7_0q887"]
 [ext_resource type="Texture2D" uid="uid://ctkjy5i4i3c4d" path="res://Sprites/tonel.png" id="7_ukab0"]
 [ext_resource type="PackedScene" uid="uid://c00rys5v1nyig" path="res://player.tscn" id="8_jaq0v"]
+[ext_resource type="Texture2D" uid="uid://dqre1bfjjkb2f" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta.tres" id="8_nfwqc"]
+[ext_resource type="Texture2D" uid="uid://fwxcu7rmnnjb" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta2.tres" id="9_baqsu"]
 [ext_resource type="Shader" path="res://mineradores.gdshader" id="10_1p6dw"]
+[ext_resource type="Texture2D" uid="uid://uvreravfx3br" path="res://npcs/iara/iaraC3.png" id="11_7e380"]
+[ext_resource type="Texture2D" uid="uid://bfcdlm20nm4iy" path="res://npcs/humans/dormiu3.tres" id="11_dum3o"]
 [ext_resource type="PackedScene" uid="uid://bqbvss7eihtn2" path="res://info.tscn" id="11_ei415"]
+[ext_resource type="Texture2D" uid="uid://bit10pdcj8qso" path="res://npcs/iara/iaraC.png" id="12_of3et"]
+[ext_resource type="Texture2D" uid="uid://dc3pthrmvg5tf" path="res://npcs/humans/dormiu.tres" id="12_tggwd"]
+[ext_resource type="Texture2D" uid="uid://d2oquu7sypvdf" path="res://npcs/iara/iaraC2.png" id="13_ih03k"]
+[ext_resource type="Texture2D" uid="uid://cnr7aa4e5xeub" path="res://npcs/humans/dormiu2.tres" id="13_w58hr"]
+[ext_resource type="AudioStream" uid="uid://0uuemlsy7xcd" path="res://musicas/canto.mp3" id="15_ydlb6"]
+[ext_resource type="Texture2D" uid="uid://q6hl3lfqo3ea" path="res://Backgrounds/BG.jpg" id="16_g85gj"]
+[ext_resource type="FontFile" uid="uid://despp4nmxkkse" path="res://Fonte/PressStart2P-Regular.ttf" id="17_kqqco"]
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="19_jm7df"]
+[ext_resource type="Texture2D" uid="uid://stritbp6r8if" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-x.png" id="20_71epr"]
+[ext_resource type="Texture2D" uid="uid://cqvb03u8g0dt7" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-return2.png" id="21_w5xyb"]
+[ext_resource type="Texture2D" uid="uid://ng645k7e40t0" path="res://Sprites/Capivara/pulo2.tres" id="23_r0iv5"]
+[ext_resource type="AudioStream" uid="uid://cclfcjj2u41qw" path="res://musicas/chat.mp3" id="24_pdrq6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xtjq"]
 size = Vector2(1191, 52)
@@ -52,11 +68,42 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cu2p8"]
 size = Vector2(138, 112)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvh2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nfwqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_baqsu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_onl01"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_0q887")
+"texture": ExtResource("11_7e380")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_of3et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ih03k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_of3et")
+}],
+"loop": true,
+"name": &"Cantando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7e380")
 }],
 "loop": true,
 "name": &"Parada",
@@ -81,6 +128,17 @@ shader_parameter/seed = 5.0
 shader_parameter/custom_color = Color(1, 0.8, 0.184314, 0.65098)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hohin"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cj7li"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_r0iv5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Mineradores" type="Node2D"]
 script = ExtResource("1_syy8r")
@@ -201,11 +259,6 @@ position = Vector2(356, 482)
 scale = Vector2(0.4205, 0.389)
 texture = ExtResource("5_6d61y")
 
-[node name="miner5" type="Sprite2D" parent="."]
-position = Vector2(123, 470)
-scale = Vector2(-0.194, 0.174)
-texture = ExtResource("5_bpve4")
-
 [node name="miner4" type="Sprite2D" parent="."]
 position = Vector2(166, 421)
 scale = Vector2(-0.363, 0.35)
@@ -215,6 +268,12 @@ texture = ExtResource("3_b22ev")
 position = Vector2(242, 473)
 scale = Vector2(0.4205, 0.389)
 texture = ExtResource("5_6d61y")
+
+[node name="miner5" type="Sprite2D" parent="."]
+position = Vector2(123, 470)
+rotation = 3.14159
+scale = Vector2(0.194, -0.174)
+texture = ExtResource("5_bpve4")
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(137, 390)
@@ -228,6 +287,12 @@ animation = &"presa"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource("RectangleShape2D_cu2p8")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D2"]
+position = Vector2(-18, -81)
+scale = Vector2(2.51915, 2.09738)
+sprite_frames = SubResource("SpriteFrames_wvh2u")
+frame_progress = 0.670662
+
 [node name="Tonel" type="Sprite2D" parent="."]
 position = Vector2(417, 555)
 texture = ExtResource("7_ukab0")
@@ -235,9 +300,10 @@ texture = ExtResource("7_ukab0")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(816, 479)
 rotation = 3.14159
-scale = Vector2(0.487252, -0.487252)
+scale = Vector2(-0.487, -0.487)
 sprite_frames = SubResource("SpriteFrames_onl01")
-animation = &"Parada"
+animation = &"Cantando"
+frame_progress = 0.841613
 
 [node name="Player" parent="." instance=ExtResource("8_jaq0v")]
 position = Vector2(1090, 510)
@@ -270,6 +336,24 @@ offset_bottom = 14.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_hohin")
 
+[node name="dormiu" type="Sprite2D" parent="."]
+position = Vector2(179, 443)
+rotation = 0.837758
+scale = Vector2(0.478814, 0.478814)
+texture = ExtResource("11_dum3o")
+
+[node name="dormiu2" type="Sprite2D" parent="."]
+position = Vector2(261, 501)
+rotation = -0.698132
+scale = Vector2(0.478814, 0.478814)
+texture = ExtResource("12_tggwd")
+
+[node name="dormiu3" type="Sprite2D" parent="."]
+position = Vector2(103, 515)
+rotation = -0.459022
+scale = Vector2(0.478814, 0.478814)
+texture = ExtResource("13_w58hr")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_left = -7.0
@@ -298,9 +382,104 @@ position = Vector2(718, 6)
 wait_time = 2.0
 one_shot = true
 
+[node name="Canto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_ydlb6")
+parameters/looping = true
+
+[node name="Timer5" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Bg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 324.5)
+scale = Vector2(1.11238, 1.21667)
+texture = ExtResource("16_g85gj")
+
+[node name="Label" type="Label" parent="Bg"]
+offset_left = -322.0
+offset_top = -192.0
+offset_right = 320.0
+offset_bottom = -130.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("17_kqqco")
+theme_override_font_sizes/font_size = 22
+text = "VOCÊ CONCLUIU A FASE NORTE!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Bg"]
+offset_left = -276.0
+offset_top = -156.0
+offset_right = 274.0
+offset_bottom = -56.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("17_kqqco")
+theme_override_font_sizes/font_size = 13
+text = "OBRIGADO POR JOGAR ESTE DEMO!
+
+Mas fique atento, pois as aventuras da capivarinha no Brasil não acabarão por aqui!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg"]
+position = Vector2(0, 49.3151)
+scale = Vector2(0.579558, 0.543986)
+sprite_frames = SubResource("SpriteFrames_cj7li")
+frame_progress = 0.0254482
+script = ExtResource("19_jm7df")
+
+[node name="Timer" type="Timer" parent="Bg/AnimatedSprite2D"]
+autostart = true
+
+[node name="Sair" type="Button" parent="Bg"]
+offset_left = 169.0
+offset_top = 170.0
+offset_right = 414.0
+offset_bottom = 240.0
+theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
+theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("17_kqqco")
+text = "SAIR"
+icon = ExtResource("20_71epr")
+flat = true
+expand_icon = true
+
+[node name="Novamente" type="Button" parent="Bg"]
+offset_left = -420.0
+offset_top = 170.0
+offset_right = -127.0
+offset_bottom = 240.0
+theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
+theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("17_kqqco")
+text = "EM BREVE"
+icon = ExtResource("21_w5xyb")
+flat = true
+expand_icon = true
+
+[node name="Timer6" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="Timer7" type="Timer" parent="."]
+
+[node name="Chat-talking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_pdrq6")
+
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
 [connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="timeout" from="Timer5" to="." method="_on_timer_5_timeout"]
+[connection signal="timeout" from="Bg/AnimatedSprite2D/Timer" to="Bg/AnimatedSprite2D" method="_on_timer_timeout"]
+[connection signal="pressed" from="Bg/Sair" to="." method="_on_sair_pressed"]
+[connection signal="timeout" from="Timer6" to="." method="_on_timer_6_timeout"]
+[connection signal="timeout" from="Timer7" to="." method="_on_timer_7_timeout"]

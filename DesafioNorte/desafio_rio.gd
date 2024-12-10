@@ -34,8 +34,21 @@ func _process(delta: float) -> void:
 	hp(player.get_hp())
 	coleta(player.get_coleta())
 	pont()
+	if !cabou:
+		morreu()
 	if player.get_pont() >= 600:
 		cabo()
+
+func morreu():
+	if Global.morreu == true:
+		Global.morreu = false
+		$Player.position.y += 5000
+		$Player.scale.y *= 0.01
+		$Player.scale.x *= 0.01
+		$Player.set_velocidade(0)
+		$Labelp2.show()
+		$Reiniciar.show()
+		$Sair.show()
 
 func cabo():
 	cabou = true
@@ -46,7 +59,7 @@ func cabo():
 	if flag:
 		$River.self_modulate.a += 0.005
 	if player.position.y <= -50:
-		get_tree().quit() #Alterar para mudança de fase
+		get_tree().change_scene_to_file("res://mineradores.tscn")
 
 func _on_timer_timeout() -> void:
 	if (!cabou):
@@ -90,3 +103,9 @@ func hp(x):
 
 func _on_timer_2_timeout() -> void:
 	flag = true
+
+func _on_sair_pressed() -> void:
+	get_tree().quit()
+
+func _on_reiniciar_pressed() -> void:
+	get_tree().reload_current_scene()

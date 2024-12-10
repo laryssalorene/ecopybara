@@ -5,3 +5,4 @@ var apertou = 0
 var craft = false
 var usouRede = false
 var local = 0
+var morreu = false

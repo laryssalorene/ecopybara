@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c00rys5v1nyig"]
+[gd_scene load_steps=14 format=3 uid="uid://c00rys5v1nyig"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_udvj4"]
 [ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://Sprites/Capivara/capivarinhas.png" id="2_pf3gw"]
@@ -6,9 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dsq083nxym801" path="res://Sprites/Capivara/aaa.png" id="4_c30xd"]
 [ext_resource type="AudioStream" uid="uid://c5mikjp80xivy" path="res://musicas/pulo.mp3" id="5_mjqia"]
 [ext_resource type="Texture2D" uid="uid://b8p5osfqkpidb" path="res://Sprites/Capivara/idle.tres" id="5_w7rum"]
-[ext_resource type="Texture2D" uid="uid://2qgwcnd02cih" path="res://Sprites/Capivara/idle2.tres" id="6_mnctp"]
-[ext_resource type="Texture2D" uid="uid://dvcohvbts5ygi" path="res://Sprites/Capivara/idle3.tres" id="7_63epw"]
 [ext_resource type="Texture2D" uid="uid://casc1scyu5ocf" path="res://Sprites/Capivara/idle4.tres" id="8_rr80x"]
+[ext_resource type="Texture2D" uid="uid://cw3iqjp7kt8k1" path="res://Sprites/Capivara/puloc.png" id="8_ruxj3"]
 [ext_resource type="Texture2D" uid="uid://clvvyx8k5ts0j" path="res://Sprites/Capivara/pulo.tres" id="9_g7j1p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_caeh0"]
@@ -37,24 +36,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_g7j1p")
+}],
+"loop": true,
+"name": &"Danca",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("5_w7rum")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_mnctp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_63epw")
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_rr80x")
 }],
 "loop": true,
 "name": &"Parada",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_g7j1p")
+"texture": ExtResource("8_ruxj3")
 }],
 "loop": true,
 "name": &"Pulo",
@@ -78,6 +79,7 @@ offset_bottom = 61.0
 scale = Vector2(0.219, 0.219)
 sprite_frames = SubResource("SpriteFrames_of46r")
 animation = &"Pulo"
+frame_progress = 0.236898
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

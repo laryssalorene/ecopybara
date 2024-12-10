@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dc3pthrmvg5tf"]
+
+[ext_resource type="Texture2D" uid="uid://c73tpik04vgpn" path="res://npcs/humans/minersSleeping.png" id="1_3e5o6"]
+
+[resource]
+atlas = ExtResource("1_3e5o6")
+region = Rect2(102, 77, 242, 323)

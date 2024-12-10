@@ -13,6 +13,9 @@ func _ready() -> void:
 func get_hp():
 	return hp
 
+func set_velocidade(x):
+	speed = x
+
 func get_coleta():
 	if Global.craft == true:
 		return lixo_coletado
@@ -43,8 +46,8 @@ func coleta_metal():
 	else:
 		hp -= 1
 		if hp <= 0:
+			Global.morreu = true
 			#Implementar lógica de fim
-			get_tree().change_scene_to_file("res://DesafioNorte/desafio_rio.tscn")
 
 func _process(delta):
 	var movimento = Vector2()

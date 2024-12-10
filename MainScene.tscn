@@ -196,6 +196,7 @@ grow_vertical = 2
 pivot_offset = Vector2(190, 190)
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -7.0
 offset_top = -6.0
 offset_right = 1159.0

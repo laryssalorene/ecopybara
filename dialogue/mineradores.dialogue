@@ -1,35 +1,63 @@
 ~ start
 ... Vozes à distância
+set State.som = "sim"
 Minerador 1: Cara, não sei mais onde despejar, os barris já estão todos cheios.
-Minerador 2: Despeja no rio, agora que a gente tem a Iara, o rio é nosso!
-Minerador 1: Er... Tá bom então, vou esperar outra remessa e despejar tudo lá.
-Minerador 3: Deixem de se preocupar com isso, o almoço tá chegando e vocês ai discutindo!
+Minerador 2: Despeja no rio. Agora que a gente tem a Iara, o rio é nosso!
+Minerador 1: Er... Tá bom, então. Vou esperar outra remessa e despejar tudo lá.
+Minerador 3: Deixem de se preocupar com isso! O almoço está chegando, e vocês aí discutindo!
 - Esperar?
+	set State.som = "nao"
 	set State.foram = "sim"
 => END
 
 ~ momento
-Capivara: É a Iara, Tenho que tentar resgatar ela!
+set State.som = "sim"
+Capivara: É a Iara! Tenho que tentar resgatá-la!
+set State.som = "nao"
 => END
 
 ~ cipo
-Acho que daqui já é alto o suficiente, irei me agarrar a um cipó para conseguir saltar próximo daquele telhado.
-- Atravessar com cipó!
+Acho que daqui já é alto o suficiente. Vou me agarrar a um cipó para conseguir saltar próximo daquele telhado.
+- Atravessar com o cipó!
 	set State.cipo = "sim"
 => END
 
 ~ chave
 Finalmente achei a chave!
 set State.chave = "sim"
-- Retornar a Iara.
+Retorne à Iara.
+- OK
 => END
 
 ~ iara
+set State.som = "sim"
 if State.chave == "nao":
 	Iara: Capivarinhaaa! Você veio!
-	Capivara: Agora não é o momento para comemorações, como posso lhe soltar?
-	Iara: Eles guardam uma chave do outro lado do rio, mas ela está no telhado, você consegue chegar lá?
+	Capivara: Agora não é o momento para comemorações. Como posso soltá-la?
+	Iara: Eles guardam uma chave do outro lado do rio, mas ela está no telhado. Você consegue chegar lá?
 	Capivara: Eu dou um jeito!
+	set State.som = "nao"
 elif State.chave == "sim":
-	Capivara: Consegui! Vou lhe soltar!
+	Capivara: Consegui! Vou soltá-la!
+	set State.som = "nao"
 	set State.solto = true
+=> END
+
+~ canto
+set State.som = "sim"
+Mineradores 1, 2 e 3: ELA ESCAPOU!!!???
+Iara: Capivarinha, deixe que eu cuidarei deles agora. Vou ensiná-los que com a natureza não se mexe!
+set State.som = "nao"
+Iara começa a cantar...
+Mineradores 1, 2 e 3: EEI, O QUE QUE VOCÊ VAI FAZER??
+- Observa a Iara
+set State.acabou = true
+set State.danca = true
+=> END
+
+~ fim
+set State.som = "sim"
+Iara: Não se preocupe, Capivarinha. O IBAMA irá lidar com eles. Eu ficarei aqui até eles chegarem. Continue em suas aventuras, nunca se sabe o que o destino lhe reserva!
+set State.som = "nao"
+set State.fim = true
+=> END

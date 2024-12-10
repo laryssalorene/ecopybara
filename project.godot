@@ -26,6 +26,11 @@ MusicManager="*res://MusicManager.tscn"
 
 general/states=["Global"]
 
+[display]
+
+window/size/resizable=false
+window/stretch/aspect="expand"
+
 [dotnet]
 
 project/assembly_name="Computação Gráfica - Joguinho Feliz"

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ng645k7e40t0"]
+
+[ext_resource type="Texture2D" uid="uid://cw3iqjp7kt8k1" path="res://Sprites/Capivara/puloc.png" id="1_nwup0"]
+
+[resource]
+atlas = ExtResource("1_nwup0")
+region = Rect2(2, 19, 363, 374)

@@ -1,0 +1,63 @@
+res://addons/dialogue_manager/components/editor_property/editor_property_control.tscn::1ac5a656b8ebd0c1c3f388fbabb13108::1731597368::res://.godot/exported/133200997/export-e6551c697be622f6f28de3ce27c66911-editor_property_control.scn
+res://addons/dialogue_manager/components/editor_property/resource_button.tscn::98d9ef89ece54c5a65394b8e3e429616::1731597368::res://.godot/exported/133200997/export-d6982417a6d4bbaa52c872e8d58f148a-resource_button.scn
+res://addons/dialogue_manager/components/code_edit.tscn::1d6237b7eedf8940a34e1c26ce017d60::1731597367::res://.godot/exported/133200997/export-afb545b170719e27a7fd3f1340116b10-code_edit.scn
+res://addons/dialogue_manager/components/download_update_panel.tscn::bbd0652bfe33375ab7df26ce37556bec::1731597368::res://.godot/exported/133200997/export-dd2309c54bebb1b8b4e2968b0836701e-download_update_panel.scn
+res://addons/dialogue_manager/components/errors_panel.tscn::87e2e2fc13b287f96753f502c9ab62e2::1731597368::res://.godot/exported/133200997/export-ea6e1bfc6d22f187ea4da24ace7b5dce-errors_panel.scn
+res://addons/dialogue_manager/components/files_list.tscn::0c09db48503d22205521a7f538ac0cf6::1731597368::res://.godot/exported/133200997/export-2a28997d3f2fb7eefb2a8324333da88f-files_list.scn
+res://addons/dialogue_manager/components/find_in_files.tscn::a70e35d5f6718053f22ad04e350d0ccf::1731597368::res://.godot/exported/133200997/export-60c9c2fb186c3ec58bf069f3b83f71d0-find_in_files.scn
+res://addons/dialogue_manager/components/search_and_replace.tscn::dfb154d698389bc9220dd0c2a3691427::1731597368::res://.godot/exported/133200997/export-d227edfbcd00f694e71f0a4ef2516c28-search_and_replace.scn
+res://addons/dialogue_manager/components/title_list.tscn::09e0ee2d84e815c3efd1174caba6cd76::1731597368::res://.godot/exported/133200997/export-3f7e1494d2ca6bb96a353ad7ff2c972f-title_list.scn
+res://addons/dialogue_manager/components/update_button.tscn::106577a44370660f6e454de473aa23b9::1731597368::res://.godot/exported/133200997/export-7ca55931d1608d9ad1448730abe1df8e-update_button.scn
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn::bdf6e75987df339ef85d4c3b5f1f4c66::1732979459::res://.godot/exported/133200997/export-57fc9b32a4ae3d4a3041b46baf4b8f92-example_balloon.scn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn::29889bee594c75c0c522a547ab2d96f8::1731597369::res://.godot/exported/133200997/export-25872080cd204f02261b5746b425708f-small_example_balloon.scn
+res://addons/dialogue_manager/views/main_view.tscn::c3c9a6ffcbae1c1180d896c01e407b3d::1731597369::res://.godot/exported/133200997/export-378867351062275ea9ff7cce9c21c795-main_view.scn
+res://addons/dialogue_manager/views/settings_view.tscn::95bd37214f904ca8b67aa104a3e8efca::1731597369::res://.godot/exported/133200997/export-e616ee8b42797cb31c0c61fda637fec0-settings_view.scn
+res://addons/dialogue_manager/dialogue_label.tscn::d1cd2e100a3ba7c1d71909b273c69ab4::1731597366::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
+res://addons/dialogue_manager/test_scene.tscn::d2a49979fbd5dec1a89649e2cbd76d8e::1731597367::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
+res://DesafioNorte/desafio_antes.tscn::43b2d9f0108ff0e5be20574435be8678::1733832289::res://.godot/exported/133200997/export-74b0769d8b04c9eac4edf9d5eaf73f0e-desafio_antes.scn
+res://DesafioNorte/desafio_rio.tscn::13a4a2aa4333bb3a9eab374f0e677d94::1733832289::res://.godot/exported/133200997/export-2a7aff0322da34ddf20604d416d9ea08-desafio_rio.scn
+res://DesafioNorte/lixo.tscn::229dc9cd599d5a4ad8cc999a5c90b122::1733815624::res://.godot/exported/133200997/export-f26fce0fa43a6a89068dfdc32b591844-lixo.scn
+res://DesafioNorte/player.tscn::ec1e26cf7d74c4f39b00bf8f517757c4::1733832289::res://.godot/exported/133200997/export-091ddfdc4b67a69dedbf515b9768e9f4-player.scn
+res://helpers/actionable.tscn::0b9da9b32d410c551d8a3f46fcbc390b::1731620348::res://.godot/exported/133200997/export-a57e4aacc39af2823ab3cb6e57cb4aeb-actionable.scn
+res://npcs/humans/dormiu2.tres::ae4faeac437f6c9a55052927726760e7::1733824933::res://.godot/exported/133200997/export-f535f5611f1dea826388f478b36c3eac-dormiu2.res
+res://npcs/humans/dormiu3.tres::c777343529cde09a79370de38cea5a2e::1733824945::res://.godot/exported/133200997/export-282fd7657c89257379ff23a2e15368f1-dormiu3.res
+res://npcs/humans/dormiu.tres::7c386f61b3ec420346a071c7f6f4e36f::1733824919::res://.godot/exported/133200997/export-fd762fa257163d67f8db9428c10bcf68-dormiu.res
+res://npcs/humans/miner2.tres::36bde4cc69da5ab0eed99c85184925ae::1733817429::res://.godot/exported/133200997/export-6d2ad5028add3908ceb9a23277db414b-miner2.res
+res://npcs/humans/miner.tres::3f387c2264419bb10ce0f97520da1f05::1733819033::res://.godot/exported/133200997/export-cd0804e289bae81f0c5caff61175e810-miner.res
+res://npcs/iara/presa.tres::30d697630e8379274f6faa15f7885889::1733819017::res://.godot/exported/133200997/export-c5327112b0d2a82eb340713c4d313359-presa.res
+res://npcs/iara/solta.tres::a084f018be8439e1d49f79da86138ca2::1733818032::res://.godot/exported/133200997/export-8f26713f1b35189ee2c681c41b28bf42-solta.res
+res://Sprites/Capivara/idle2.tres::19154ed7e18f5195775afff343ab5b20::1733799843::res://.godot/exported/133200997/export-c29c6d08f9447ad137de27c41380d3e3-idle2.res
+res://Sprites/Capivara/idle3.tres::8ae275c30750b73aa781364969320314::1733799866::res://.godot/exported/133200997/export-774180b2039c6146099f8ca480116c8f-idle3.res
+res://Sprites/Capivara/idle4.tres::602841f37334f94243fe9e71815343c5::1733832593::res://.godot/exported/133200997/export-26a119f6746e09bd5d01cf69678b4066-idle4.res
+res://Sprites/Capivara/idle.tres::a4973d991c3148ab82139c5748ba4520::1733799819::res://.godot/exported/133200997/export-7611d091f6f234884b82bda29091006a-idle.res
+res://Sprites/Capivara/nado2.tres::dab1af95d5852eab0a4669148a6437d0::1733796030::res://.godot/exported/133200997/export-ef021f63b0fbee9fe965ae08c9b8ad0a-nado2.res
+res://Sprites/Capivara/nado3.tres::9f26b21eb4ffb281b1c1e5bbd127e25b::1733796030::res://.godot/exported/133200997/export-befa22b2a3e40cdbab3ce4e345adfa20-nado3.res
+res://Sprites/Capivara/nado4.tres::fe7e6d5b4f3574f21d5904f9d0d9cce3::1733796030::res://.godot/exported/133200997/export-caa063e30ce8e28c696ac898b5ddf005-nado4.res
+res://Sprites/Capivara/nado.tres::0e89e90537e8afe02a44edfbff5ca8c0::1733796727::res://.godot/exported/133200997/export-54eebd5f7f8e8144be138adbbd4d4ca9-nado.res
+res://Sprites/Capivara/pulo2.tres::2e000c38941b7f7dfdbd32794cf8b9d6::1733834143::res://.godot/exported/133200997/export-4ce3eb30c1b6121e9612ee9e90681175-pulo2.res
+res://Sprites/Capivara/pulo.tres::0f929cdbb134030506716fa0383c4128::1733803101::res://.godot/exported/133200997/export-29b3286754c6364e948cbcca8f033330-pulo.res
+res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta2.tres::8309f9311868a89454a64928492736a5::1733795171::res://.godot/exported/133200997/export-a7e6afb31a4b16cb0365f5a1b49a7c5d-alerta2.res
+res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta.tres::0e87b45fc26ad535259250807eb3a3c7::1733795171::res://.godot/exported/133200997/export-ad9ba42a872f68097c683830cae8ceef-alerta.res
+res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres::6f394c34a80313f11822a9b308146916::1733832892::res://.godot/exported/133200997/export-e3e06266bddf738435fb41866ec2c711-Balao2.res
+res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao3.tres::b0bda5923712f4fe0ab2179b584f982a::1733832892::res://.godot/exported/133200997/export-98faf36481eccc3734b778efa23746a0-Balao3.res
+res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres::d7dfb6c0b42099c08fb2d65c44c55bce::1733832892::res://.godot/exported/133200997/export-332780ef772e527c47911f6a913e00b8-Balao.res
+res://Sprites/e.tres::8d03c6d8ad9598ce082446ccc9deec79::1733788915::res://.godot/exported/133200997/export-de5750cf3b03650dc3610ed2f4a8672b-e.res
+res://Sprites/lixo2.tres::cdc16085a9da9fe128e21d534cacc72d::1733797112::res://.godot/exported/133200997/export-0e2c4da31a79de7192f498f7abc7f203-lixo2.res
+res://Sprites/lixo3.tres::164b1929eeabd5689cdcef0d4be947b5::1733797134::res://.godot/exported/133200997/export-f0a4ab2d0e087e442a1db038323dd07c-lixo3.res
+res://Sprites/lixo4.tres::17bc74144b78e355afd1e0172e802256::1733797841::res://.godot/exported/133200997/export-1f4fa052993b57959e6e9eab4c8b7aed-lixo4.res
+res://Sprites/lixo5.tres::5afce459decf6489f6d2e211f21953a8::1733797178::res://.godot/exported/133200997/export-4b74de98c2ab97fdbcdc98e8711d355e-lixo5.res
+res://Sprites/lixo.tres::3156a2d746e8e074152e5df6a8bb0750::1733797097::res://.godot/exported/133200997/export-5d90a4c5b2ca0632b9c3955d33b8fdea-lixo.res
+res://Sprites/lixoP2.tres::0ed4f2e87434d97a340f50e4b14a3f66::1733797061::res://.godot/exported/133200997/export-dc868d6e26ea7ec1dfede3ab4c9d6224-lixoP2.res
+res://Sprites/lixoP.tres::468f922098dc712c3425c93f8f87f221::1733797038::res://.godot/exported/133200997/export-d619d71600d874d6e6be1a946f48ac94-lixoP.res
+res://Sprites/setabaixo.tres::c2451ae1f983a843a0e20beddf46f749::1733788894::res://.godot/exported/133200997/export-234dbce303dcf1b4b8e8a0681b717299-setabaixo.res
+res://Sprites/setacima.tres::e36a6764a2e95f788697f41b846c331f::1733788883::res://.godot/exported/133200997/export-dba4d6deb2c7b61a9d6b6cb7134b3005-setacima.res
+res://Sprites/setadireita.tres::c7de72d9cec53750357118663d3eee73::1733788907::res://.godot/exported/133200997/export-65e0685c2c7d311e3f2e5c026ce8501d-setadireita.res
+res://Sprites/setaesquerda.tres::200c3254b3f30ee3c65cad15d43039ca::1733788902::res://.godot/exported/133200997/export-aec418dae72bf5a69daceccc2f7b8d8d-setaesquerda.res
+res://info.tscn::78909e46930458539c16809f10471d1d::1733829669::res://.godot/exported/133200997/export-ec359f40a6c2d03c807ccc6346e28c2d-info.scn
+res://MainScene.tscn::93b362c74dbe471a5e9ab7101466f4b5::1733832291::res://.godot/exported/133200997/export-a00ca0e08a1ac5e46d330a7c1b8d7acb-MainScene.scn
+res://MainScreen.tscn::87786b42b376a8a7c8e74c67e89036d6::1733832289::res://.godot/exported/133200997/export-7f85004d6ad36341f68e3bad7c9f3d57-MainScreen.scn
+res://mineradores.tscn::b38e84cea315f877b99e4527850a1c8c::1733834222::res://.godot/exported/133200997/export-191b25c06244253c4e513ae84af45af5-mineradores.scn
+res://MusicManager.tscn::553b8a3f7840f02d31bffe0b877e145f::1733815624::res://.godot/exported/133200997/export-d390b2d774e24bfacd37c81759d25b9a-MusicManager.scn
+res://player.tscn::f573ad0913c34a1dbb663c2d60ea587c::1733834143::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://ribeirinhos.tscn::572a8e0b82732ee2531f5de817a5cc14::1733834175::res://.godot/exported/133200997/export-cde7c6382a995be7e17efe51734680b3-ribeirinhos.scn
+res://ribeirinhosFase.tscn::0759dc02f44e0606657fe929ce3eea4a::1733822674::res://.godot/exported/133200997/export-904a2f6ddc1b965742a5abaced8c26b0-ribeirinhosFase.scn

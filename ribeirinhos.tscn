@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://mb621eaba0in"]
+[gd_scene load_steps=36 format=3 uid="uid://mb621eaba0in"]
 
 [ext_resource type="Texture2D" uid="uid://bmdo87ognhet0" path="res://Backgrounds/bckR.jpg" id="1_fy4ps"]
 [ext_resource type="Script" path="res://ribeirinhos.gd" id="1_mg3d3"]
@@ -18,10 +18,8 @@
 [ext_resource type="AudioStream" uid="uid://cclfcjj2u41qw" path="res://musicas/chat.mp3" id="13_deu4t"]
 [ext_resource type="Texture2D" uid="uid://b8p5osfqkpidb" path="res://Sprites/Capivara/idle.tres" id="14_8fk4a"]
 [ext_resource type="PackedScene" uid="uid://bqbvss7eihtn2" path="res://info.tscn" id="14_g5437"]
-[ext_resource type="Texture2D" uid="uid://2qgwcnd02cih" path="res://Sprites/Capivara/idle2.tres" id="15_5bj1t"]
-[ext_resource type="Texture2D" uid="uid://dvcohvbts5ygi" path="res://Sprites/Capivara/idle3.tres" id="16_8u2eq"]
+[ext_resource type="Texture2D" uid="uid://ng645k7e40t0" path="res://Sprites/Capivara/pulo2.tres" id="16_kupbt"]
 [ext_resource type="Texture2D" uid="uid://casc1scyu5ocf" path="res://Sprites/Capivara/idle4.tres" id="17_urv7k"]
-[ext_resource type="Texture2D" uid="uid://clvvyx8k5ts0j" path="res://Sprites/Capivara/pulo.tres" id="18_vgh8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iho4"]
 size = Vector2(1182, 52)
@@ -108,21 +106,15 @@ animations = [{
 "texture": ExtResource("14_8fk4a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_5bj1t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_8u2eq")
-}, {
-"duration": 1.0,
 "texture": ExtResource("17_urv7k")
 }],
 "loop": true,
 "name": &"Parada",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("18_vgh8n")
+"texture": ExtResource("16_kupbt")
 }],
 "loop": true,
 "name": &"Pulo",
