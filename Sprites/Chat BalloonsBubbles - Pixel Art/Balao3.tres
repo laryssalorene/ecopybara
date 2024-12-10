@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://rvi2vau6fvg6"]
+
+[ext_resource type="Texture2D" uid="uid://cpu5ufeew3m56" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/All.png" id="1_5qxwh"]
+
+[resource]
+atlas = ExtResource("1_5qxwh")
+region = Rect2(272, 81, 16, 14)

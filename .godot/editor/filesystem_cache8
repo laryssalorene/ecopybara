@@ -1,29 +1,31 @@
 c693a20e708c4e09bfa9edf12a750cf8
-::res://::1733332147
+::res://::1733799843
 actionable.gd::GDScript::-1::1731597339::0::1::::<>Area2D<>::
 criança.gd::GDScript::-1::1731597339::0::1::::<>Area2D<>::
 dialogue_manager.gd::GDScript::-1::1731597339::0::1::::<>RefCounted<>::
-Estatua.gdshader::Shader::-1::1733271964::0::1::::<><>::
-estátua.gdshader::Shader::-1::1733271964::0::1::::<><>::
+Estatua.gdshader::Shader::-1::1733799866::0::1::::<><>::
+estátua.gdshader::Shader::-1::1733799866::0::1::::<><>::
 f1.tscn::PackedScene::4373752788401193282::1732833133::0::1::::<><>::uid://cmg7q5sn3dkco::::res://Tiles/backForest.png<>res://f_1.gd<>uid://dh2nbx4jeevqg::::res://Tiles/Tiles.png<>res://player.gd<>uid://p0txulj2o3la::::res://Tiles/tile.png<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>uid://dl0vrvaopu0ub::::res://Sprites/Capivara/aaa2.png<>res://peixe_1.gd<>uid://rhsuy57tmoeo::::res://npcs/animais/peixe1.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn<>uid://bkhex7h34l1xx::::res://Sprites/Garden cozy kit/Post/Assets/Collectibles/Diamond-green.png
 f_1.gd::GDScript::-1::1731621357::0::1::::<>Node2D<>::
 global.gd::GDScript::-1::1732788823::0::1::::<>Node<>::
 gpu_particles_2d.gd::GDScript::-1::1733271791::0::1::::<>GPUParticles2D<>::
 icon.svg::CompressedTexture2D::599234268071361945::1731597339::1731599495::1::::<><>::
-MainScene.gdshader::Shader::-1::1733271964::0::1::::<><>::
-MainScene.tscn::PackedScene::4270281078357176008::1733271944::0::1::::<><>::res://main_scene.gd<>res://estátua.gdshader<>uid://cafs0ndws1ig1::::res://Backgrounds/cave.png<>uid://c00rys5v1nyig::::res://player.tscn<>uid://ddq0nfpwpdtm0::::res://Sprites/Estatuas/iara.png<>res://MainScene.gdshader<>res://Estatua.gdshader
+info.gd::GDScript::-1::1733794549::0::1::::<>Node2D<>::
+info.tscn::PackedScene::3512814755840836697::1733799527::0::1::::<><>::res://info.gd<>uid://7wa7m1pry0n2::::res://Sprites/setacima.tres<>uid://rpyapke6w0t7::::res://Sprites/setabaixo.tres<>uid://c2tkb74rwrbof::::res://Sprites/setaesquerda.tres<>uid://dxbayyo2fnjhi::::res://Sprites/setadireita.tres<>uid://cq3mm4b0trp6a::::res://Sprites/e.tres<>uid://dx4jta76g33y4::::res://Sprites/int.png<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf
+MainScene.gdshader::Shader::-1::1733799866::0::1::::<><>::
+MainScene.tscn::PackedScene::4270281078357176008::1733799527::0::1::::<><>::res://main_scene.gd<>res://estátua.gdshader<>uid://cafs0ndws1ig1::::res://Backgrounds/cave.png<>uid://dqre1bfjjkb2f::::res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta.tres<>uid://c00rys5v1nyig::::res://player.tscn<>uid://ddq0nfpwpdtm0::::res://Sprites/Estatuas/iara.png<>res://MainScene.gdshader<>res://Estatua.gdshader<>uid://fwxcu7rmnnjb::::res://Sprites/Chat BalloonsBubbles - Pixel Art/alerta2.tres<>uid://bqbvss7eihtn2::::res://info.tscn
 MainScreen.gd::GDScript::-1::1732762363::0::1::::<>CanvasLayer<>::
-MainScreen.tscn::PackedScene::3804331248845949262::1733271944::0::1::::<><>::uid://q6hl3lfqo3ea::::res://Backgrounds/BG.jpg<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf<>res://MainScreen.gd<>uid://c05eo0ehgtcax::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow.png<>uid://goutmx5lftab::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-=.png<>uid://ckb1yfludui1c::::res://Sons/start screen.mp3<>uid://cx6mte58v7nnd::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-x.png
-main_scene.gd::GDScript::-1::1732979536::0::1::::<>Node2D<>::
+MainScreen.tscn::PackedScene::3804331248845949262::1733799527::0::1::::<><>::uid://q6hl3lfqo3ea::::res://Backgrounds/BG.jpg<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf<>res://MainScreen.gd<>uid://kow56a7l2ig3::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-arrow.png<>uid://cnw1yg0hjb0cm::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-=.png<>uid://stritbp6r8if::::res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-x.png<>uid://ddt8tr4uoiess::::res://musicas/Musica.mp3
+main_scene.gd::GDScript::-1::1733795082::0::1::::<>Node2D<>::
 peixe_1.gd::GDScript::-1::1732788128::0::1::::<>CharacterBody2D<>::
-player.gd::GDScript::-1::1732832940::0::1::::<>CharacterBody2D<>::
-player.gdshader::Shader::-1::1733271964::0::1::::<><>::
-player.tscn::PackedScene::6580247942873116190::1733271911::0::1::::<><>::res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>res://player.gdshader<>uid://dsq083nxym801::::res://Sprites/Capivara/aaa.png
+player.gd::GDScript::-1::1733783435::0::1::::<>CharacterBody2D<>::
+player.gdshader::Shader::-1::1733799866::0::1::::<><>::
+player.tscn::PackedScene::6580247942873116190::1733799527::0::1::::<><>::res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>res://player.gdshader<>uid://dsq083nxym801::::res://Sprites/Capivara/aaa.png<>uid://c5mikjp80xivy::::res://musicas/pulo.mp3
 playerAgua.gd::GDScript::-1::1732833438::0::1::::<>CharacterBody2D<>::
-ribeirinhos.gd::GDScript::-1::1733267578::0::1::::<>Node2D<>::
-ribeirinhos.tscn::PackedScene::846262316409327889::1733271912::0::1::::<><>::uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>res://ribeirinhos.gd<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn<>res://player.gd<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>uid://dl0vrvaopu0ub::::res://Sprites/Capivara/aaa2.png<>res://player.gdshader
-ribeirinhosFase.tscn::PackedScene::8163132745458481074::1733271912::0::1::::<><>::res://ribeirinhos.gd<>uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>res://playerAgua.gd<>uid://cqjfym1dfs582::::res://Sprites/Capivara/cabeça.png<>uid://d00ed3qx48uya::::res://Sprites/Capivara/cabeça2.png
-state.gd::GDScript::-1::1731597339::0::1::::<>Node<>::
+ribeirinhos.gd::GDScript::-1::1733795660::0::1::::<>Node2D<>::
+ribeirinhos.tscn::PackedScene::846262316409327889::1733799866::0::1::::<><>::uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>res://ribeirinhos.gd<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn<>res://player.gd<>uid://rvi2vau6fvg6::::res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao3.tres<>uid://ftqia7p67d1u::::res://Sprites/Capivara/capivarinhas.png<>uid://bfk62lvvco22a::::res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres<>uid://cv5j5jms4ckx8::::res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres<>uid://dl0vrvaopu0ub::::res://Sprites/Capivara/aaa2.png<>res://player.gdshader<>uid://c5mikjp80xivy::::res://musicas/pulo.mp3<>uid://cclfcjj2u41qw::::res://musicas/chat.mp3<>uid://bqbvss7eihtn2::::res://info.tscn
+ribeirinhosFase.tscn::PackedScene::8163132745458481074::1733799527::0::1::::<><>::res://ribeirinhos.gd<>uid://bmdo87ognhet0::::res://Backgrounds/bckR.jpg<>uid://dr8nuhqpvc1fq::::res://npcs/humans/hf2.png<>uid://6b544cpiymvh::::res://npcs/humans/hf1.png<>uid://c7cysic7h6fv0::::res://npcs/humans/criRib.png<>uid://61vci1d2wkk::::res://npcs/humans/criaRibf.png<>res://playerAgua.gd<>uid://cqjfym1dfs582::::res://Sprites/Capivara/cabeça.png<>uid://d00ed3qx48uya::::res://Sprites/Capivara/cabeça2.png<>uid://bqbvss7eihtn2::::res://info.tscn<>uid://cclfcjj2u41qw::::res://musicas/chat.mp3
+state.gd::GDScript::-1::1733786128::0::1::::<>Node<>::
 ::res://addons/::1731624185
 ::res://addons/dialogue_manager/::1731624185
 constants.gd::GDScript::-1::1731597366::0::1::::<>Node<>::
@@ -100,24 +102,32 @@ bg.png::CompressedTexture2D::2310628432973216738::1731597369::1731599498::1::::<
 cave.png::CompressedTexture2D::4784301495336549622::1731597369::1731599498::1::::<><>::
 Dirtyriver.png::CompressedTexture2D::4104464464127281940::1731597369::1731599498::1::::<><>::
 river.png::CompressedTexture2D::5640740324620996161::1733239233::1733239235::1::::<><>::
-::res://DesafioNorte/::1733271912
-desafio_antes.gd::GDScript::-1::1732979536::0::1::::<>Node2D<>::
-desafio_antes.tscn::PackedScene::7409284619069346066::1733271912::0::1::::<><>::res://DesafioNorte/desafio_antes.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>res://DesafioNorte/player2.gd<>res://peixe_1.gd<>uid://rhsuy57tmoeo::::res://npcs/animais/peixe1.png<>uid://6yyim8eer220::::res://helpers/actionable.tscn
-desafio_rio.gd::GDScript::-1::1733242009::0::1::::<>Node2D<>::
-desafio_rio.tscn::PackedScene::8457240419063336166::1733271912::0::1::::<><>::res://DesafioNorte/desafio_rio.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>uid://c57x0l2tdgo13::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Heart.png<>uid://cmmof0nk5t14h::::res://Backgrounds/river.png<>uid://wm0whauuvmcv::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-heart.png<>uid://dtvcdglax600j::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Coin.png<>uid://clvqcbqhsyr7n::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-coin.png<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf
-lixo.gd::GDScript::-1::1731597369::0::1::::<>Area2D<>::
-lixo.tscn::PackedScene::7741417051876344282::1733271912::0::1::::<><>::res://DesafioNorte/lixo.gd
-player2.gd::GDScript::-1::1732787994::0::1::::<>CharacterBody2D<>::
-player.gd::GDScript::-1::1732979913::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::1311129968374632858::1733271912::0::1::::<><>::res://DesafioNorte/player.gd
-::res://dialogue/::1732786676
-crianca.dialogue::Resource::4661127369323679824::1732786676::1732786676::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-peixe.dialogue::Resource::915124198880562560::1732786624::1732786624::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://DesafioNorte/::1733799843
+desafio_antes.gd::GDScript::-1::1733796246::0::1::::<>Node2D<>::
+desafio_antes.tscn::PackedScene::7409284619069346066::1733799527::0::1::::<><>::res://DesafioNorte/desafio_antes.gd<>uid://cclfcjj2u41qw::::res://musicas/chat.mp3<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>res://DesafioNorte/player2.gd<>res://peixe_1.gd<>uid://rhsuy57tmoeo::::res://npcs/animais/peixe1.png<>uid://dc4t4poqwijuc::::res://Sprites/Capivara/nado.tres<>uid://bukai11h7u445::::res://Sprites/Capivara/nado2.tres<>uid://6yyim8eer220::::res://helpers/actionable.tscn<>uid://bkeij844sgrkh::::res://Sprites/Capivara/nado3.tres<>uid://rvi2vau6fvg6::::res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao3.tres<>uid://cg0c6cdhx0ost::::res://Sprites/Capivara/nado4.tres<>uid://bqbvss7eihtn2::::res://info.tscn<>uid://bfk62lvvco22a::::res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres<>uid://cv5j5jms4ckx8::::res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres
+desafio_rio.gd::GDScript::-1::1733799527::0::1::::<>Node2D<>::
+desafio_rio.tscn::PackedScene::8457240419063336166::1733799589::0::1::::<><>::res://DesafioNorte/desafio_rio.gd<>uid://byqh6ve4guyl5::::res://Backgrounds/Dirtyriver.png<>uid://sxeebt8tpf1k::::res://DesafioNorte/player.tscn<>uid://c57x0l2tdgo13::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Heart.png<>uid://cmmof0nk5t14h::::res://Backgrounds/river.png<>uid://wm0whauuvmcv::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-heart.png<>uid://dtvcdglax600j::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Coin.png<>uid://dc4t4poqwijuc::::res://Sprites/Capivara/nado.tres<>uid://bukai11h7u445::::res://Sprites/Capivara/nado2.tres<>uid://clvqcbqhsyr7n::::res://Sprites/Garden cozy kit/Post/Assets/Icons/Empty-coin.png<>uid://despp4nmxkkse::::res://Fonte/PressStart2P-Regular.ttf<>uid://bkeij844sgrkh::::res://Sprites/Capivara/nado3.tres<>uid://cg0c6cdhx0ost::::res://Sprites/Capivara/nado4.tres<>uid://bqbvss7eihtn2::::res://info.tscn
+lixo.gd::GDScript::-1::1733798727::0::1::::<>Area2D<>::
+lixo.gdshader::Shader::-1::1733799866::0::1::::<><>::
+lixo.tscn::PackedScene::7741417051876344282::1733799528::0::1::::<><>::res://DesafioNorte/lixo.gd<>uid://oeh6t2xb1ueo::::res://Sprites/lixoP.tres<>res://DesafioNorte/lixo.gdshader<>uid://1y02mchln2xg::::res://Sprites/lixoP2.tres<>uid://6xdqvkk2mxtf::::res://Sprites/lixo.tres<>uid://bva058knb4b37::::res://Sprites/lixo2.tres<>uid://80pnmwrqtg8s::::res://Sprites/lixo3.tres<>uid://pu5ogtc6oquc::::res://Sprites/lixo4.tres<>uid://dsxkl4voy3sb4::::res://Sprites/lixo5.tres
+player2.gd::GDScript::-1::1733782663::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1733796247::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::1311129968374632858::1733799528::0::1::::<><>::res://DesafioNorte/player.gd
+::res://dialogue/::1733786274
+crianca.dialogue::Resource::4661127369323679824::1733786274::1733786274::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+peixe.dialogue::Resource::915124198880562560::1733786274::1733786274::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://Fonte/::1731624185
 PressStart2P-Regular.ttf::FontFile::7478115310840556688::1731597370::1731599492::1::::<><>::
 ::res://helpers/::1732788179
 actionable.gd::GDScript::-1::1732788179::0::1::::<>Area2D<>::
 actionable.tscn::PackedScene::2226871394500607651::1731620348::0::1::::<><>::res://helpers/actionable.gd
+::res://musicas/::1733786898
+chat.mp3::AudioStreamMP3::4936234854376611174::1733786872::1733786877::1::::<><>::
+minigame_agua.mp3::AudioStreamMP3::4009146173318805532::1733771086::1733771140::1::::<><>::
+Musica.mp3::AudioStreamMP3::7411090288790039782::1733771086::1733771140::1::::<><>::
+obstaculo.mp3::AudioStreamMP3::6571375801833983361::1733771086::1733771140::1::::<><>::
+pulo.mp3::AudioStreamMP3::6903783300872980522::1733771086::1733771140::1::::<><>::
+walk.mp3::AudioStreamMP3::340123191318565139::1733771086::1733771140::1::::<><>::
 ::res://npcs/::1731624185
 ::res://npcs/animais/::1731624185
 iara.png::CompressedTexture2D::220722699382124258::1731597370::1731599497::1::::<><>::
@@ -129,8 +139,23 @@ hf1.png::CompressedTexture2D::2179793355299242529::1731597371::1731599497::1::::
 hf2.png::CompressedTexture2D::8421422288683913186::1731597371::1731599497::1::::<><>::
 ::res://Sons/::1731624185
 start screen.mp3::AudioStreamMP3::5478415962909344294::1731597371::1731599493::1::::<><>::
-::res://Sprites/::1731624187
-::res://Sprites/Capivara/::1732784664
+::res://Sprites/::1733797841
+e.tres::AtlasTexture::5954417002032371442::1733788915::0::1::::<><>::uid://cw5u4lq1cfcy0::::res://Sprites/Keyboard Letters and Symbols.png
+int.png::CompressedTexture2D::8834052843492263901::1733792827::1733792832::1::::<><>::
+Keyboard Letters and Symbols.png::CompressedTexture2D::6380193991581194713::1733600923::1733788390::1::::<><>::
+lixo2.tres::AtlasTexture::3861959648039827316::1733797112::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+lixo3.tres::AtlasTexture::2368775919179260996::1733797134::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+lixo4.tres::AtlasTexture::1095967065173595210::1733797841::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+lixo5.tres::AtlasTexture::8470770294855215719::1733797178::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+lixo.png::CompressedTexture2D::3027669079038493178::1733796995::1733796999::1::::<><>::
+lixo.tres::AtlasTexture::2223546683732487863::1733797097::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+lixoP2.tres::AtlasTexture::1876021775643971576::1733797061::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+lixoP.tres::AtlasTexture::991382741209877734::1733797038::0::1::::<><>::uid://bjevjddithh6y::::res://Sprites/lixo.png
+setabaixo.tres::AtlasTexture::1225634019506201002::1733788894::0::1::::<><>::uid://cw5u4lq1cfcy0::::res://Sprites/Keyboard Letters and Symbols.png
+setacima.tres::AtlasTexture::2291517123561646313::1733788883::0::1::::<><>::uid://cw5u4lq1cfcy0::::res://Sprites/Keyboard Letters and Symbols.png
+setadireita.tres::AtlasTexture::8775713974983450290::1733788907::0::1::::<><>::uid://cw5u4lq1cfcy0::::res://Sprites/Keyboard Letters and Symbols.png
+setaesquerda.tres::AtlasTexture::6707774005010785837::1733788902::0::1::::<><>::uid://cw5u4lq1cfcy0::::res://Sprites/Keyboard Letters and Symbols.png
+::res://Sprites/Capivara/::1733799859
 a.png::CompressedTexture2D::8428307272251645519::1731597371::1731599497::1::::<><>::
 aa.png::CompressedTexture2D::2143403143769790198::1731597371::1731599497::1::::<><>::
 aaa2.png::CompressedTexture2D::7984255293940942429::1731597371::1731599497::1::::<><>::
@@ -139,6 +164,68 @@ b.png::CompressedTexture2D::8590579133759990268::1731597371::1731599497::1::::<>
 cabeça2.png::CompressedTexture2D::8965842307690151864::1732784658::1732784664::1::::<><>::
 cabeça.png::CompressedTexture2D::5914789379987655861::1732784627::1732784664::1::::<><>::
 capivarinhas.png::CompressedTexture2D::391153203910761444::1731597371::1731599499::1::::<><>::
+idle2.tres::AtlasTexture::1928532537014273447::1733799843::0::1::::<><>::uid://cwojyaelatf00::::res://Sprites/Capivara/idle.png
+idle3.tres::AtlasTexture::8638220166865859172::1733799866::0::1::::<><>::uid://cwojyaelatf00::::res://Sprites/Capivara/idle.png
+idle.png::CompressedTexture2D::6346486534648127863::1733799694::1733799715::1::::<><>::
+idle.tres::AtlasTexture::4735465654841982559::1733799819::0::1::::<><>::uid://cwojyaelatf00::::res://Sprites/Capivara/idle.png
+nado2.tres::AtlasTexture::3810857026479235564::1733796030::0::1::::<><>::uid://ov0rim30fdpv::::res://Sprites/Capivara/nado.png
+nado3.tres::AtlasTexture::3097070218588759759::1733796030::0::1::::<><>::uid://ov0rim30fdpv::::res://Sprites/Capivara/nado.png
+nado4.tres::AtlasTexture::5245760776693372167::1733796030::0::1::::<><>::uid://ov0rim30fdpv::::res://Sprites/Capivara/nado.png
+nado.png::CompressedTexture2D::1027544467113508439::1733795819::1733795823::1::::<><>::
+nado.tres::AtlasTexture::7360712914343111918::1733796727::0::1::::<><>::uid://ov0rim30fdpv::::res://Sprites/Capivara/nado.png
+idle4.tres::AtlasTexture::4810168981214622001::1733799870::0::1::::<><>::uid://cwojyaelatf00::::res://Sprites/Capivara/idle.png
+::res://Sprites/Chat BalloonsBubbles - Pixel Art/::1733798959
+alerta2.tres::AtlasTexture::397761691890624175::1733795171::0::1::::<><>::uid://cpu5ufeew3m56::::res://Sprites/Chat BalloonsBubbles - Pixel Art/All.png
+alerta.tres::AtlasTexture::8317667330388143839::1733795171::0::1::::<><>::uid://cpu5ufeew3m56::::res://Sprites/Chat BalloonsBubbles - Pixel Art/All.png
+All.png::CompressedTexture2D::5868819071707200139::1733601525::1733769815::1::::<><>::
+Balao2.tres::AtlasTexture::2759939733790196594::1733798959::0::1::::<><>::uid://cpu5ufeew3m56::::res://Sprites/Chat BalloonsBubbles - Pixel Art/All.png
+Balao3.tres::AtlasTexture::1237097331000078679::1733798959::0::1::::<><>::uid://cpu5ufeew3m56::::res://Sprites/Chat BalloonsBubbles - Pixel Art/All.png
+Balao.tres::AtlasTexture::6309338935263207159::1733798959::0::1::::<><>::uid://cpu5ufeew3m56::::res://Sprites/Chat BalloonsBubbles - Pixel Art/All.png
+Chat-1.png::CompressedTexture2D::7300335215587109181::1733601525::1733769815::1::::<><>::
+Chat-2.png::CompressedTexture2D::6482074010548681414::1733601525::1733769815::1::::<><>::
+Chat-3.png::CompressedTexture2D::121401728108375474::1733601525::1733769815::1::::<><>::
+Chat-4.png::CompressedTexture2D::5641154352151715029::1733601525::1733769815::1::::<><>::
+Chat-5.png::CompressedTexture2D::5736746818386625978::1733601525::1733769815::1::::<><>::
+Chat-6.png::CompressedTexture2D::7048545126327949701::1733601525::1733769815::1::::<><>::
+Chat-Transparent.png::CompressedTexture2D::6686446366752021316::1733601525::1733769815::1::::<><>::
+Icons-1.png::CompressedTexture2D::4525377198606503920::1733601525::1733769815::1::::<><>::
+Icons-2.png::CompressedTexture2D::3650274969272383296::1733601525::1733769815::1::::<><>::
+Icons-3.png::CompressedTexture2D::1718487202203677947::1733601525::1733769815::1::::<><>::
+Icons-4.png::CompressedTexture2D::1130805971289811431::1733601526::1733769815::1::::<><>::
+Icons-5.png::CompressedTexture2D::3797477680078695376::1733601526::1733769815::1::::<><>::
+Icons-6.png::CompressedTexture2D::1238461448911258277::1733601526::1733769815::1::::<><>::
+Icons-Transparent.png::CompressedTexture2D::6473348499164384468::1733601526::1733769815::1::::<><>::
+Readme.txt::TextFile::-1::1733601526::0::1::::<><>::
+::res://Sprites/Chat BalloonsBubbles - Pixel Art/X2/::1733769816
+Chat-1.png::CompressedTexture2D::2351163967873432163::1733601526::1733769815::1::::<><>::
+Chat-2.png::CompressedTexture2D::5499592024131905502::1733601526::1733769815::1::::<><>::
+Chat-3.png::CompressedTexture2D::5325955147177930371::1733601526::1733769815::1::::<><>::
+Chat-4.png::CompressedTexture2D::5250505528403044983::1733601526::1733769815::1::::<><>::
+Chat-5.png::CompressedTexture2D::6726846460543719612::1733601526::1733769815::1::::<><>::
+Chat-6.png::CompressedTexture2D::524946359349113264::1733601526::1733769815::1::::<><>::
+Chat-Transparent.png::CompressedTexture2D::3955729505214900440::1733601526::1733769815::1::::<><>::
+Icons-1.png::CompressedTexture2D::3991235337008318522::1733601526::1733769816::1::::<><>::
+Icons-2.png::CompressedTexture2D::3686217805024055166::1733601526::1733769816::1::::<><>::
+Icons-3.png::CompressedTexture2D::6604950531692627159::1733601526::1733769816::1::::<><>::
+Icons-4.png::CompressedTexture2D::5560133566673359823::1733601526::1733769816::1::::<><>::
+Icons-5.png::CompressedTexture2D::5802530910662920264::1733601526::1733769816::1::::<><>::
+Icons-6.png::CompressedTexture2D::9115765020322296097::1733601526::1733769816::1::::<><>::
+Icons-Transparent.png::CompressedTexture2D::6700358339497346689::1733601526::1733769816::1::::<><>::
+::res://Sprites/Chat BalloonsBubbles - Pixel Art/X4/::1733769817
+Chat-1.png::CompressedTexture2D::1990771564049463653::1733601526::1733769816::1::::<><>::
+Chat-2.png::CompressedTexture2D::2140206143418065244::1733601526::1733769816::1::::<><>::
+Chat-3.png::CompressedTexture2D::5244362633092159510::1733601526::1733769817::1::::<><>::
+Chat-4.png::CompressedTexture2D::5467937778962364696::1733601526::1733769817::1::::<><>::
+Chat-5.png::CompressedTexture2D::8475706439646858809::1733601526::1733769817::1::::<><>::
+Chat-6.png::CompressedTexture2D::2165748342966559907::1733601526::1733769817::1::::<><>::
+Chat-Transparent.png::CompressedTexture2D::2970487879070441413::1733601526::1733769816::1::::<><>::
+Icons-1.png::CompressedTexture2D::7902856991055679376::1733601526::1733769817::1::::<><>::
+Icons-2.png::CompressedTexture2D::8284942105884333682::1733601526::1733769816::1::::<><>::
+Icons-3.png::CompressedTexture2D::8437448656205194069::1733601526::1733769816::1::::<><>::
+Icons-4.png::CompressedTexture2D::5544146795777557368::1733601526::1733769816::1::::<><>::
+Icons-5.png::CompressedTexture2D::2194620699219453584::1733601526::1733769816::1::::<><>::
+Icons-6.png::CompressedTexture2D::993451493468398776::1733601526::1733769816::1::::<><>::
+Icons-Transparent.png::CompressedTexture2D::7579804095961661611::1733601526::1733769815::1::::<><>::
 ::res://Sprites/Estatuas/::1731624185
 iara.png::CompressedTexture2D::7404400053006863621::1731597371::1731599499::1::::<><>::
 ::res://Sprites/Garden cozy kit/::1731624185

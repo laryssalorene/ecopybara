@@ -11,15 +11,18 @@ var fogoL = 1
 func _ready():
 	_iniciar_player()
 	$ColorRect.show()
+	$Iara/AnimatedSprite2D.play("default")
 
 func iluminar():
 	if $ColorRect.self_modulate.a >= 0 and parou == 0:
 		$ColorRect.self_modulate.a -= 0.005
 	else:
 		parou = 1
+		$Info.show()
 
 func escurecer():
 	if falou == 1:
+		$Info.hide()
 		$ColorRect.self_modulate.a += 0.01
 
 func _iniciar_player():

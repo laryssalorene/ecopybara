@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://2qgwcnd02cih"]
+
+[ext_resource type="Texture2D" uid="uid://cwojyaelatf00" path="res://Sprites/Capivara/idle.png" id="1_7m30r"]
+
+[resource]
+atlas = ExtResource("1_7m30r")
+region = Rect2(373, 72, 261, 412)

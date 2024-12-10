@@ -1,27 +1,39 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cfks0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_nfqvn"]
 
 [resource]
-script = ExtResource("1_cfks0")
+script = ExtResource("1_nfqvn")
 using_states = PackedStringArray()
 titles = {
-"start": "3"
+"start": "2"
 }
 character_names = PackedStringArray("Criança", "Capivara")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "start",
 "type": &"title"
 },
 "10": {
-"character": "Criança",
+"character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
-"next_id": "12",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Tô falando mesmo. E não é de sonho que eu tô atrás, não. Preciso encontrar a Iara.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tô falando mesmo. E não é de sonho que eu tô atrás, não. Preciso encontrar a Iara.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Criança",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "A Iara? Eu ouvi falar dela nas histórias que o vovô conta, mas nunca vi de verdade.",
@@ -29,11 +41,11 @@ lines = {
 "translation_key": "A Iara? Eu ouvi falar dela nas histórias que o vovô conta, mas nunca vi de verdade.",
 "type": &"dialogue"
 },
-"12": {
+"13": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "12",
-"next_id": "13",
+"id": "13",
+"next_id": "14",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Pois é, tô precisando da ajuda dela. O rio tá cada vez pior, cheio de sujeira e sem vida. Dizem que a Iara pode fazer alguma coisa.",
@@ -41,11 +53,11 @@ lines = {
 "translation_key": "Pois é, tô precisando da ajuda dela. O rio tá cada vez pior, cheio de sujeira e sem vida. Dizem que a Iara pode fazer alguma coisa.",
 "type": &"dialogue"
 },
-"13": {
+"14": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "13",
-"next_id": "15",
+"id": "14",
+"next_id": "16",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Sei lá onde ela tá, capivara. Mas tem uma coisa estranha acontecendo aqui perto...",
@@ -53,11 +65,11 @@ lines = {
 "translation_key": "Sei lá onde ela tá, capivara. Mas tem uma coisa estranha acontecendo aqui perto...",
 "type": &"dialogue"
 },
-"15": {
+"16": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "15",
-"next_id": "16",
+"id": "16",
+"next_id": "17",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Estranha como?",
@@ -65,11 +77,11 @@ lines = {
 "translation_key": "Estranha como?",
 "type": &"dialogue"
 },
-"16": {
+"17": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "16",
-"next_id": "18",
+"id": "17",
+"next_id": "19",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Os mineradores. Eles tão mexendo no rio, cavando e jogando lixo. Acho que isso tá piorando a água mais do que nunca.",
@@ -77,11 +89,11 @@ lines = {
 "translation_key": "Os mineradores. Eles tão mexendo no rio, cavando e jogando lixo. Acho que isso tá piorando a água mais do que nunca.",
 "type": &"dialogue"
 },
-"18": {
+"19": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "18",
-"next_id": "19",
+"id": "19",
+"next_id": "20",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Mineradores... Já ouvi falar que eles deixam tudo sujo e não ligam pro que tão causando.",
@@ -89,11 +101,34 @@ lines = {
 "translation_key": "Mineradores... Já ouvi falar que eles deixam tudo sujo e não ligam pro que tão causando.",
 "type": &"dialogue"
 },
-"19": {
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "som"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "sim"
+}]),
+"is_blocking": true
+},
+"next_id": "4",
+"type": &"mutation"
+},
+"20": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "19",
-"next_id": "21",
+"id": "20",
+"next_id": "22",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Pois é. Talvez a Iara esteja evitando essa parte do rio por causa deles. Mas, se você seguir o curso d'água, quem sabe consegue achar algum sinal dela?",
@@ -101,11 +136,11 @@ lines = {
 "translation_key": "Pois é. Talvez a Iara esteja evitando essa parte do rio por causa deles. Mas, se você seguir o curso d'água, quem sabe consegue achar algum sinal dela?",
 "type": &"dialogue"
 },
-"21": {
+"22": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "21",
-"next_id": "22",
+"id": "22",
+"next_id": "23",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Boa ideia, menino. Vou seguir o rio, mas vou ficar de olho nesses mineradores também.",
@@ -113,11 +148,11 @@ lines = {
 "translation_key": "Boa ideia, menino. Vou seguir o rio, mas vou ficar de olho nesses mineradores também.",
 "type": &"dialogue"
 },
-"22": {
+"23": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "22",
-"next_id": "24",
+"id": "23",
+"next_id": "25",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Só cuidado, capivara! Esse povo não gosta de ser interrompido no que tá fazendo.",
@@ -125,11 +160,11 @@ lines = {
 "translation_key": "Só cuidado, capivara! Esse povo não gosta de ser interrompido no que tá fazendo.",
 "type": &"dialogue"
 },
-"24": {
+"25": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "24",
-"next_id": "25",
+"id": "25",
+"next_id": "26",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Pode deixar. E você, faz o que puder pra manter a vila longe desse lixo todo.",
@@ -137,11 +172,11 @@ lines = {
 "translation_key": "Pode deixar. E você, faz o que puder pra manter a vila longe desse lixo todo.",
 "type": &"dialogue"
 },
-"25": {
+"26": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "25",
-"next_id": "27",
+"id": "26",
+"next_id": "28",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Tô nessa, capivara! Boa sorte com a Iara. Se encontrar ela, diz que o rio precisa dela mais do que nunca.",
@@ -149,11 +184,11 @@ lines = {
 "translation_key": "Tô nessa, capivara! Boa sorte com a Iara. Se encontrar ela, diz que o rio precisa dela mais do que nunca.",
 "type": &"dialogue"
 },
-"27": {
+"28": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "27",
-"next_id": "29",
+"id": "28",
+"next_id": "30",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Pode deixar. E vou te trazer notícias assim que puder.",
@@ -161,17 +196,63 @@ lines = {
 "translation_key": "Pode deixar. E vou te trazer notícias assim que puder.",
 "type": &"dialogue"
 },
-"29": {
-"id": "29",
+"30": {
+"id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "State"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "som"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "nao"
+}]),
+"is_blocking": true
+},
+"next_id": "31",
+"type": &"mutation"
+},
+"31": {
+"id": "31",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "apertou"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}]),
+"is_blocking": true
+},
+"next_id": "32",
+"type": &"mutation"
+},
+"32": {
+"id": "32",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 },
-"3": {
+"4": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
+"id": "4",
+"next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Pss...",
@@ -179,11 +260,11 @@ lines = {
 "translation_key": "Pss...",
 "type": &"dialogue"
 },
-"4": {
+"5": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "4",
-"next_id": "6",
+"id": "5",
+"next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Pss... Pss...",
@@ -191,11 +272,11 @@ lines = {
 "translation_key": "Pss... Pss...",
 "type": &"dialogue"
 },
-"6": {
+"7": {
 "character": "Capivara",
 "character_replacements": Array[Dictionary]([]),
-"id": "6",
-"next_id": "7",
+"id": "7",
+"next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Quié?",
@@ -203,32 +284,21 @@ lines = {
 "translation_key": "Quié?",
 "type": &"dialogue"
 },
-"7": {
+"8": {
 "character": "Criança",
 "character_replacements": Array[Dictionary]([]),
-"id": "7",
-"next_id": "9",
+"id": "8",
+"next_id": "10",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Eu tô sonhando ou essa capivara tá falando?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Eu tô sonhando ou essa capivara tá falando?",
 "type": &"dialogue"
-},
-"9": {
-"character": "Capivara",
-"character_replacements": Array[Dictionary]([]),
-"id": "9",
-"next_id": "10",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Tô falando mesmo. E não é de sonho que eu tô atrás, não. Preciso encontrar a Iara.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Tô falando mesmo. E não é de sonho que eu tô atrás, não. Preciso encontrar a Iara.",
-"type": &"dialogue"
 }
 }
 raw_text = "~ start
+set State.som = \"sim\"
 
 Criança: Pss...
 Criança: Pss... Pss...
@@ -256,5 +326,7 @@ Criança: Tô nessa, capivara! Boa sorte com a Iara. Se encontrar ela, diz que o
 
 Capivara: Pode deixar. E vou te trazer notícias assim que puder.
 
+set State.som = \"nao\"
+set Global.apertou = 2
 => END"
 metadata/dialogue_manager_version = "2.44.0"

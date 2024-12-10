@@ -1,44 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bug31rrf7hjtm"]
+[gd_scene load_steps=9 format=3 uid="uid://bug31rrf7hjtm"]
 
 [ext_resource type="Texture2D" uid="uid://q6hl3lfqo3ea" path="res://Backgrounds/BG.jpg" id="1"]
 [ext_resource type="FontFile" uid="uid://despp4nmxkkse" path="res://Fonte/PressStart2P-Regular.ttf" id="3"]
 [ext_resource type="Script" path="res://MainScreen.gd" id="4"]
-[ext_resource type="Texture2D" uid="uid://c05eo0ehgtcax" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Grass-Buttons-arrow.png" id="4_nyexx"]
-[ext_resource type="Texture2D" uid="uid://goutmx5lftab" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-=.png" id="5_p6032"]
-[ext_resource type="AudioStream" uid="uid://ckb1yfludui1c" path="res://Sons/start screen.mp3" id="6_56du3"]
-[ext_resource type="Texture2D" uid="uid://cx6mte58v7nnd" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Clear Menu Buttons/Buttons-x.png" id="6_n0s8q"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
-[sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/2/0/ascent = 0.0
-cache/0/2/0/descent = 0.0
-cache/0/2/0/underline_position = 0.0
-cache/0/2/0/underline_thickness = 0.0
-cache/0/2/0/scale = 1.0
-cache/0/24/0/ascent = 0.0
-cache/0/24/0/descent = 0.0
-cache/0/24/0/underline_position = 0.0
-cache/0/24/0/underline_thickness = 0.0
-cache/0/24/0/scale = 1.0
+[ext_resource type="Texture2D" uid="uid://kow56a7l2ig3" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-arrow.png" id="4_3v6da"]
+[ext_resource type="Texture2D" uid="uid://cnw1yg0hjb0cm" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-=.png" id="5_nj7i7"]
+[ext_resource type="Texture2D" uid="uid://stritbp6r8if" path="res://Sprites/Garden cozy kit/Post/Assets/Menu Buttons/Grass Menu Buttons/Grass-Buttons-x.png" id="6_8g5qk"]
+[ext_resource type="AudioStream" uid="uid://ddt8tr4uoiess" path="res://musicas/Musica.mp3" id="7_eg7ob"]
 
 [sub_resource type="FontFile" id="4"]
 fallbacks = Array[Font]([ExtResource("3"), ExtResource("3")])
@@ -69,9 +37,10 @@ offset_bottom = 79.0
 theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
 theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
-theme_override_fonts/font = SubResource("1")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3")
 text = "INICIAR"
-icon = ExtResource("4_nyexx")
+icon = ExtResource("4_3v6da")
 flat = true
 expand_icon = true
 
@@ -83,9 +52,10 @@ offset_bottom = 154.0
 theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
 theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
-theme_override_fonts/font = SubResource("1")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3")
 text = " INFO"
-icon = ExtResource("5_p6032")
+icon = ExtResource("5_nj7i7")
 flat = true
 expand_icon = true
 
@@ -97,9 +67,10 @@ offset_bottom = 229.0
 theme_override_colors/font_hover_color = Color(0.898039, 0.784314, 0.713726, 1)
 theme_override_colors/font_pressed_color = Color(0.529412, 0.403922, 0.317647, 1)
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
-theme_override_fonts/font = SubResource("1")
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3")
 text = "SAIR"
-icon = ExtResource("6_n0s8q")
+icon = ExtResource("6_8g5qk")
 flat = true
 expand_icon = true
 
@@ -110,7 +81,8 @@ offset_right = 236.0
 offset_bottom = -70.0
 theme_override_colors/font_color = Color(1, 0.968627, 0.894118, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("2")
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3")
 theme_override_font_sizes/font_size = 24
 text = "ECOPYBARA"
 horizontal_alignment = 1
@@ -132,9 +104,8 @@ Acompanhe esta capivara em sua jornada!
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="MusicaAmbiente" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(135, 193)
-stream = ExtResource("6_56du3")
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_eg7ob")
 autoplay = true
 
 [connection signal="pressed" from="Iniciar" to="." method="_on_Iniciar_pressed"]

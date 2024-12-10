@@ -7,6 +7,9 @@ var lixo_coletado = 0
 var hp = 3
 var pont = 0
 
+func _ready() -> void:
+	pass
+
 func get_hp():
 	return hp
 

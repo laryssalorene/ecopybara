@@ -1,6 +1,23 @@
-res://MainScene.tscn
+res://DesafioNorte/desafio_rio.tscn
 res://estátua.gdshader
 res://player.gdshader
 res://MainScene.gdshader
 res://Estatua.gdshader
+res://DesafioNorte/lixo.gdshader
+res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao3.tres
+res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres
+res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres
 res://MainScreen.tscn
+res://MainScene.tscn
+res://player.tscn
+res://DesafioNorte/desafio_antes.tscn
+res://ribeirinhos.tscn
+res://info.tscn
+res://ribeirinhosFase.tscn
+res://DesafioNorte/player.tscn
+res://DesafioNorte/lixo.tscn
+res://DesafioNorte/desafio_rio.gd
+res://Sprites/Capivara/idle.tres
+res://Sprites/Capivara/idle2.tres
+res://Sprites/Capivara/idle3.tres
+res://Sprites/Capivara/idle4.tres

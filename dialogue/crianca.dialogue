@@ -1,4 +1,5 @@
 ~ start
+set State.som = "sim"
 
 Criança: Pss...
 Criança: Pss... Pss...
@@ -26,4 +27,6 @@ Criança: Tô nessa, capivara! Boa sorte com a Iara. Se encontrar ela, diz que o
 
 Capivara: Pode deixar. E vou te trazer notícias assim que puder.
 
+set State.som = "nao"
+set Global.apertou = 2
 => END

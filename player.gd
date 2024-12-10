@@ -35,11 +35,12 @@ func set_pulo_forca(x):
 	pulo_forca = x
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_interact2"):
-		var actionables = actionable_finder.get_overlapping_areas()
-		if actionables.size() > 0:
-			actionables[0].action()
-			return
+	if get_tree().get_current_scene().name != "MainScene":
+		if Input.is_action_just_pressed("ui_interact"):
+			var actionables = actionable_finder.get_overlapping_areas()
+			if actionables.size() > 0:
+				actionables[0].action()
+				return
 
 # Função para movimentar o personagem
 func _movimentar_personagem(delta):
@@ -47,10 +48,11 @@ func _movimentar_personagem(delta):
 	movimento.x = 0
 	
 	# Verificar se as teclas de movimento estão sendo pressionadas
-	if Input.is_action_pressed("ui_interact"):
-		Global.apertou = 1
-		await get_tree().create_timer(0.1).timeout
-		Global.apertou = 0
+	if get_tree().get_current_scene().name == "MainScene":
+		if Input.is_action_pressed("ui_interact"):
+			Global.apertou = 1
+			await get_tree().create_timer(0.1).timeout
+			Global.apertou = 0
 	if Input.is_action_pressed("ui_right"):
 		movimento.x += velocidade
 		$AnimatedSprite2D.play("Andar")
@@ -63,6 +65,7 @@ func _movimentar_personagem(delta):
 		$AnimatedSprite2D.play("Parada")
 	
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
+		$Pulo.play()
 		velocity.y = -pulo_forca
 	
 	if not is_on_floor():
@@ -72,7 +75,7 @@ func _movimentar_personagem(delta):
 	if is_on_floor():
 		$ColorRect.show()
 	
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("ui_down") and is_on_floor():
 		collision_mask = 0
 		await get_tree().create_timer(0.1).timeout
 		collision_mask = 1

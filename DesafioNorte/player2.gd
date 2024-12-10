@@ -28,10 +28,6 @@ func _process(delta):
 		movimento.y += speed
 	velocity.y = movimento.y
 	move_and_slide()
-	if Input.is_action_pressed("ui_interact"):
-		Global.apertou = 1
-		await get_tree().create_timer(0.1).timeout
-		Global.apertou = 0
 	
 	if position.y < y_min_limit:
 		position.y = y_min_limit
@@ -51,7 +47,7 @@ func set_pulo_forca(x):
 	pulo_forca = x
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_interact2"):
+	if Input.is_action_just_pressed("ui_interact"):
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
 			actionables[0].action()

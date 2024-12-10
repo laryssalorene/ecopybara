@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cg0c6cdhx0ost"]
+
+[ext_resource type="Texture2D" uid="uid://ov0rim30fdpv" path="res://Sprites/Capivara/nado.png" id="1_tcfis"]
+
+[resource]
+atlas = ExtResource("1_tcfis")
+region = Rect2(369, 596, 274, 383)

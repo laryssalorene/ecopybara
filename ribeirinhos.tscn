@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://mb621eaba0in"]
+[gd_scene load_steps=37 format=3 uid="uid://mb621eaba0in"]
 
 [ext_resource type="Texture2D" uid="uid://bmdo87ognhet0" path="res://Backgrounds/bckR.jpg" id="1_fy4ps"]
 [ext_resource type="Script" path="res://ribeirinhos.gd" id="1_mg3d3"]
@@ -8,9 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://61vci1d2wkk" path="res://npcs/humans/criaRibf.png" id="6_weemp"]
 [ext_resource type="PackedScene" uid="uid://6yyim8eer220" path="res://helpers/actionable.tscn" id="8_hkv74"]
 [ext_resource type="Script" path="res://player.gd" id="8_opi40"]
+[ext_resource type="Texture2D" uid="uid://rvi2vau6fvg6" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao3.tres" id="8_xwfqm"]
 [ext_resource type="Texture2D" uid="uid://ftqia7p67d1u" path="res://Sprites/Capivara/capivarinhas.png" id="9_ahvvd"]
+[ext_resource type="Texture2D" uid="uid://bfk62lvvco22a" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres" id="9_qi3u4"]
+[ext_resource type="Texture2D" uid="uid://cv5j5jms4ckx8" path="res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres" id="10_ch52g"]
 [ext_resource type="Texture2D" uid="uid://dl0vrvaopu0ub" path="res://Sprites/Capivara/aaa2.png" id="10_r3gji"]
 [ext_resource type="Shader" path="res://player.gdshader" id="11_2ktxy"]
+[ext_resource type="AudioStream" uid="uid://c5mikjp80xivy" path="res://musicas/pulo.mp3" id="12_c5c5y"]
+[ext_resource type="AudioStream" uid="uid://cclfcjj2u41qw" path="res://musicas/chat.mp3" id="13_deu4t"]
+[ext_resource type="Texture2D" uid="uid://b8p5osfqkpidb" path="res://Sprites/Capivara/idle.tres" id="14_8fk4a"]
+[ext_resource type="PackedScene" uid="uid://bqbvss7eihtn2" path="res://info.tscn" id="14_g5437"]
+[ext_resource type="Texture2D" uid="uid://2qgwcnd02cih" path="res://Sprites/Capivara/idle2.tres" id="15_5bj1t"]
+[ext_resource type="Texture2D" uid="uid://dvcohvbts5ygi" path="res://Sprites/Capivara/idle3.tres" id="16_8u2eq"]
+[ext_resource type="Texture2D" uid="uid://casc1scyu5ocf" path="res://Sprites/Capivara/idle4.tres" id="17_urv7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iho4"]
 size = Vector2(1182, 52)
@@ -58,13 +68,26 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_8kqw4"]
 radius = 181.904
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_sidf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xwfqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qi3u4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ch52g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtikh"]
 atlas = ExtResource("9_ahvvd")
 region = Rect2(343, 536, 288, 400)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1x6vu"]
-atlas = ExtResource("9_ahvvd")
-region = Rect2(19, 101, 267, 412)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d38gd"]
 animations = [{
@@ -81,7 +104,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1x6vu")
+"texture": ExtResource("14_8fk4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5bj1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8u2eq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_urv7k")
 }],
 "loop": true,
 "name": &"Parada",
@@ -164,16 +196,22 @@ sprite_frames = SubResource("SpriteFrames_udqfj")
 [node name="Actionable" parent="crianca" instance=ExtResource("8_hkv74")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crianca/Actionable"]
+position = Vector2(0, 4.79053)
 shape = SubResource("CircleShape2D_8kqw4")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="crianca"]
+position = Vector2(0, -186.83)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_sidf3")
+
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(220, 330)
+position = Vector2(223, 325)
 script = ExtResource("8_opi40")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(0.219403, 0.219403)
 sprite_frames = SubResource("SpriteFrames_d38gd")
-animation = &"Andar"
+animation = &"Parada"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_jc03e")
@@ -196,6 +234,9 @@ offset_top = 29.0
 offset_right = 72.0
 offset_bottom = 61.0
 
+[node name="Pulo" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("12_c5c5y")
+
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 offset_left = -10.0
@@ -211,6 +252,14 @@ one_shot = true
 [node name="TimerPuloCima" type="Timer" parent="."]
 wait_time = 0.25
 one_shot = true
+
+[node name="Chat-talking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_deu4t")
+parameters/looping = true
+
+[node name="Info" parent="." instance=ExtResource("14_g5437")]
+visible = false
+position = Vector2(718, 6)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimerPuloCima" to="." method="_on_timer_pulo_cima_timeout"]

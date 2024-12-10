@@ -8,6 +8,7 @@ var flag = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$River.self_modulate.a = 0
+	$Player/Nado.play("default")
 	player = $Player
 	player.position.y = Global.local
 	randomize()
@@ -15,21 +16,25 @@ func _ready() -> void:
 
 func _spawn_item():
 	var variacao = min(floor(1 + player.get_pont()/100), 5)
+	var a = randi_range(1, 7 - variacao)
 	var item = lixo_scene.instantiate()
+	if a == 1:
+		item.set_speed(400 + player.get_pont()/2)
+	else:
+		item.set_speed(200 + player.get_pont()/2)
 	add_child(item)
 	item.position = Vector2(1152, randf_range(50, 600))
-	if randi_range(1, 7 - variacao) == 1:
+	if a == 1:
 		item.set_item_type(item.ItemType.METAL_PESADO)
 	else:
 		item.set_item_type(item.ItemType.LIXO_COMUM)
-	item.set_speed(200 + player.get_pont()/2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	hp(player.get_hp())
 	coleta(player.get_coleta())
 	pont()
-	if player.get_pont() >= 10:
+	if player.get_pont() >= 600:
 		cabo()
 
 func cabo():

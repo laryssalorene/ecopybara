@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://1y02mchln2xg"]
+
+[ext_resource type="Texture2D" uid="uid://bjevjddithh6y" path="res://Sprites/lixo.png" id="1_2p7s0"]
+
+[resource]
+atlas = ExtResource("1_2p7s0")
+region = Rect2(307, 852, 128, 138)

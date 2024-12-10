@@ -1,3 +1,5 @@
 extends Node
 
-var quest_status: String = ""
+var som: String = "nao"
+
+var pronto: String = "nao"
