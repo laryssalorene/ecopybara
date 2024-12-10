@@ -1,4 +1,4 @@
-res://MainScene.tscn
+res://DesafioNorte/desafio_rio.tscn
 res://estátua.gdshader
 res://player.gdshader
 res://MainScene.gdshader
@@ -7,9 +7,8 @@ res://DesafioNorte/lixo.gdshader
 res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao3.tres
 res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao2.tres
 res://Sprites/Chat BalloonsBubbles - Pixel Art/Balao.tres
-res://state.gd
 res://MainScreen.tscn
-res://DesafioNorte/desafio_rio.tscn
+res://MainScene.tscn
 res://player.tscn
 res://DesafioNorte/desafio_antes.tscn
 res://ribeirinhos.tscn
@@ -17,12 +16,7 @@ res://info.tscn
 res://ribeirinhosFase.tscn
 res://DesafioNorte/player.tscn
 res://DesafioNorte/lixo.tscn
-res://player.gd
-res://main_scene.gd
-res://helpers/actionable.gd
-res://actionable.gd
+res://DesafioNorte/desafio_rio.gd
+res://DesafioNorte/lixo.gd
 res://MusicManager.tscn
-res://DesafioNorte/desafio_antes.gd
-res://ribeirinhos.gd
-res://Sprites/Capivara/pulo.tres
-res://MainScreen.gd
+res://DesafioNorte/player.gd

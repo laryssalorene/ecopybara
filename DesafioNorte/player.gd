@@ -26,6 +26,7 @@ func set_speed(x):
 	y_min_limit = -200
 
 func coleta_lixo():
+	$Coleta.play()
 	pont += 10
 	if Global.craft == false:
 		lixo_coletado += 1
@@ -33,6 +34,7 @@ func coleta_lixo():
 			Global.craft = true
 
 func coleta_metal():
+	$Coleta.play()
 	if Global.craft:
 		pont += 200
 		lixo_coletado = 0

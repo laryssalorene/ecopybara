@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://sxeebt8tpf1k"]
+[gd_scene load_steps=4 format=3 uid="uid://sxeebt8tpf1k"]
 
 [ext_resource type="Script" path="res://DesafioNorte/player.gd" id="1_7kuq0"]
+[ext_resource type="AudioStream" uid="uid://wfa8hte8yli1" path="res://musicas/Coleta.mp3" id="2_8dc6v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wiwe"]
 size = Vector2(32, 44)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7kuq0")
+
+[node name="Coleta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8dc6v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
